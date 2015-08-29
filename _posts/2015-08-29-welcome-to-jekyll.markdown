@@ -1,0 +1,55 @@
+---
+layout: post
+title:  "Introducción express a AngularJS y a mi nuevo blog"
+date:   2015-08-27 21:00:50
+categories: angularjs
+---
+
+##TL;DR
+```
+Vale la pena aprender AngularJS, intentaré ayudarte en el camino.
+```
+
+##AngularJS ¿Dafuq?: Introducción express de 7s
+
+( * Leer en 7s o menos * ) [AngularJS][angularjsSite] es un [framework][framework] para desarrollo de aplicaciones del lado del cliente (para navegadores) creado por un equipo de gente en Google. Tiene una comunidad muy grande y cada vez va ganando más popularidad.
+
+![AngularJS!!!!!!!!!!!](https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/AngularJS_logo.svg/320px-AngularJS_logo.svg.png){: .image-center }
+
+Un framework es un 'marco de trabajo/para trabajar' (?) traducido literalmente, y básicamente es lo que Angular no da, nos proporciona una gran cantidad de cosas fantásticas para hacer en nuestra aplicación web, solo tienes que aprender a usar este marco, las herramientas que nos pone y cómo aprovecharlas.
+
+##Ujumm y ¿Que tiene de particular? ¿Qué lo hace taaaan 'especial'?
+
+- Data binding: si cambio un valor aquí, el valor se actualiza automáticamente allá [y del mismo modo en el sentido contrario][delMismoModo]
+<!--more-->
+- Routing: Puedes tener navegación a través de n cantidad de páginas/vistas sin necesidad de un servidor que genere contenido. Página de inicio, about, libro de visitas (si es que todavía usas eso), contacto...
+- "Testabilidad": Angular está pensado para ser probado. Puedes hacer pruebas unitarias, end to end (e2e) y [hasta pruebas de accesibilidad][testAccesibility] :scream:
+- Directivas: son algo así como plugins muy completos y organizados
+- Inyección de dependencias: algo así como "tu decides cuando 'importas' este plugin o 'libreriá'"
+
+##No sé, suena demasiado complicado
+Primero cambia esa actitud, me estoy esforzando para explicarlo. Un poco de ayuda de tu parte nos beneficiaría a los dos (bueno a ti, yo ya usé mi tiempo escribiendo esto y ya sé algo de AngularJS)
+
+##Ok, ok. Suena fantabuloso y quiero aprenderlo... ¿Cómo hago? :D
+Mucha gente piensa que aprender a usar AngularJS es difícil. Tienen razón. Si empiezan por leer la documentación del sitio oficial, [angularjs.org][angularjsTutorial] o deciden buscar entender por que es MVW y que es MVC o MVW. Me parece que lo mejor es verlo en la práctica y experimentar con él, como cuando iniciaste la adolescencia. Así vas a entender todo lo que puedes hacer con él y lo fácil que es usarlo... Así mismo puedes aprender los riesgos que conlleva no usarlo con responsabilidad.
+
+### ¿Entonces cómo hago?
+- Si eres un rebelde y no esperas a que nadie te diga como vivir tu vida ([I salute you][iSaluteYou]) te recomiendo leer tutoriales de no hace más de 6 meses y preferiblemente que estén en inglés. Vas a encontrar algunos hablando acerca de AngularJS 2.x, no te adelantes a los hechos, Angular 1.x sigue siendo la versión estable (1.4.4 a la fecha de edición).
+- ¿Vives en Colombia? ~~Pobre de ti :/~~ ...
+- ¿Vives en Bogotá? [Tenemos un Meetup/grupo][meetup]. Nos reunimos frecuentemente para hablar tranquilamente de Angular y tomar cerveza.
+- ¿No vives aquí pero hablas español? Claramente hablas español, si no no habrías llegado hasta este punto... Cuando haga/mos algún hangout para hablar de AngularJS lo anunciaremos a través de [la cuenta @AngularJSbogota][ngTuister] y la mía [@UnJavaScripter][tuister].
+- ¿Te pasas media vida en "el feis" (a.k.a Facebook)? Ya me lo imaginaba... [También tenemos grupo en FB][feis] siéntete libre de hacer las preguntas más tontas que se te puedan ocurrir, luego piensa que no hay preguntas tontas y que con gusto alguien te ayudará.
+- ¿Quieres posts/tutoriales? Ya vendrán guías interesantes ten paciencia, este es el mi primer post y tengo que aprender a usar [Jekyll][jekyll] en GitHub Pages, esto de bloggear en [Markdown][md] es nuevo para mi.
+
+[framework]: https://es.wikipedia.org/wiki/Framework
+[delMismoModo]: https://www.youtube.com/watch?v=J_A-zEr4DT4
+[testAccesibility]: https://www.youtube.com/watch?v=-XUmf_RPF8k
+[angularjsSite]: https://angularjs.org/
+[angularjsTutorial]: https://docs.angularjs.org/tutorial
+[iSaluteYou]: http://static2.fjcdn.com/comments/You+my+friend+are+a+gentleman+and+scholar+i+salute+_cb5aac2a63538518d8bb5f87107ae179.jpg
+[meetup]: www.meetup.com/AngularJS-Bogota/
+[ngTuister]: https://twitter.com/AngularJSBogota
+[tuister]: https://twitter.com/UnJavaScripter
+[feis]: https://www.facebook.com/AngularJS.co
+[jekyll]: http://jekyllrb.com/
+[md]: https://es.wikipedia.org/wiki/Markdown
