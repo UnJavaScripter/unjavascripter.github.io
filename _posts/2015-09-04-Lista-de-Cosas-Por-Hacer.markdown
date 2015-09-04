@@ -75,4 +75,3 @@ Creo que es suficiente por ahora ¿Comentarios?
 
 **El demo funcionando:**
 
-<iframe style="width: 100%; min-height: 360px; height: auto" src="http://embed.plnkr.co/Nsjb73rRBaSbGQEXO2oH/index.html" frameborder="0"></iframe>
