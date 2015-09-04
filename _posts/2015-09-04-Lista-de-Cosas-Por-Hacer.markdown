@@ -3,6 +3,7 @@ layout: post
 title:  "Ejemplo básico: Lista de Cosas Por Hacer"
 date:   2015-09-04 14:30:50
 categories: angularjs
+comments: true
 ---
 ##Lista de Cosas Por Hacer
 En el mundo AngularJS el ejemplo básico suele ser un To Do list (lista de cosas por hacer/asuntos pendientes/...), entonces hagamos una.

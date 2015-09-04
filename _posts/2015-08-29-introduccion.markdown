@@ -3,6 +3,7 @@ layout: post
 title:  "Introducción express a AngularJS y a mi nuevo blog"
 date:   2015-08-27 21:00:50
 categories: angularjs
+comments: true
 ---
 
 ##TL;DR
