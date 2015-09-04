@@ -10,7 +10,7 @@ En el mundo AngularJS el ejemplo básico suele ser un To Do list (lista de cosas
 
 ###1 - Agregando la librería
 Simplemente llamamos a un único script
-```html
+{% highlight html %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +23,7 @@ Simplemente llamamos a un único script
 
 </body>
 </html>
-```
+{% endhighlight %}
 - En el navegador verás: nada
 
 ###2 - Definir en donde vivirá nuestra aplicación AngularJS
@@ -32,7 +32,7 @@ Algo maravilloso de AngularJS es que puede residir en conjunto con otros framewo
 Para definir nuestra aplicación simplemente usamos la directiva (ya después veremos que es eso, por ahora vamos a pensar en ella como un atributo más para una etiqueta HTML) **ng-app**. Si bien podemos ubicarla dentro de cualquier contenedor html, vamos a ponerla dentro de la etiqueta < body >, de esta forma todo lo que esté dentro del cuerpo (body) de nuestr aplicación estará al alcance (en el *scope*) de AngularJS.
 
 La directiva **ng-app** requiere un valor, este será el nombre de nuestra aplicación, en nuestro caso será *listaDeCosasPorHacer*
-```html
+{% highlight html %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,12 +44,12 @@ La directiva **ng-app** requiere un valor, este será el nombre de nuestra aplic
 
 </body>
 </html>
-```
+{% endhighlight %}
 - En el navegador verás: nada
 
 ###3 - Crear nuestra aplicación en JavaScript
 Ya definimos en donde va a existir nuestra aplicación dentro del HTML de nuestra aplicación, ahora debemos referenciarlo en nuestro archivo JavaScript
-```html
+{% highlight html %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -73,12 +73,12 @@ Ya definimos en donde va a existir nuestra aplicación dentro del HTML de nuestr
 
 </body>
 </html>
-```
+{% endhighlight %}
 - En el navegador verás: nada
 
 ###4 - Probar que funciona
 AngularJS intentará interpretar cualquier cosa que encuentre envuelta en llaves dobles: {{ }}. Más adelante veremos cómo funcionan, por ahora nos bastará con ver si al poner en ellas una operación matematica obtenemos un resultado
-```html
+{% highlight html %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -95,7 +95,7 @@ AngularJS intentará interpretar cualquier cosa que encuentre envuelta en llaves
 	</script>
 </body>
 </html>
-```
+{% endhighlight %}
 - En el navegador verás: [La respuesta a la vida, el universo y todo es: 42](http://plnkr.co/edit/rKrLZC7yCKdXwpzBC8Fh?p=preview){:target="_blank"}
 
 
@@ -105,7 +105,7 @@ Ya tenemos nuestra aplicación definida, ahora necesitamos un controlador para t
 Dentro del controlador usaremos **$scope**, creo que lo mejor es pensar en él como el puente que permite conectar nuestro controlador con el HTML (la vista). Todo lo que se defina dentro de $scope será visible en la vista y será accesible a través de dobles llaves.
 
 En la vista crearemos un div con la directiva ng-controller con valor igual al nombre del controlador ponemos en nuestro archivo JavaScript
-```html
+{% highlight html %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -148,7 +148,7 @@ En la vista crearemos un div con la directiva ng-controller con valor igual al n
 	</script>
 </body>
 </html>
-```
+{% endhighlight %}
 - [Demo](http://plnkr.co/edit/JegccOMiGutygr2LVIpt?p=preview){:target="_blank"}
 
 ###6 - Binding
@@ -157,7 +157,7 @@ Ya sabemos que funciona, ahora vamos a conectar nuestro código JavaScript a nue
 Vamos a crear un campo de texto en el html, le asignaremos el valor tareaNueva usando la directiva ng-model, así ambos valores quedarán ligados.
 
 Para que sea visible el binding vamos a poner entre llaves dobles "tareaNueva"
-```html
+{% highlight html %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -187,7 +187,7 @@ Para que sea visible el binding vamos a poner entre llaves dobles "tareaNueva"
 	</script>
 </body>
 </html>
-```
+{% endhighlight %}
 
 - [Demo](http://plnkr.co/edit/PqREpmoDJjATvQFtYc5N?p=preview){:target="_blank"}
 
@@ -195,7 +195,7 @@ Para que sea visible el binding vamos a poner entre llaves dobles "tareaNueva"
 Vamos a usar otra directiva, en este punto ya es evidente que las directivas son una gran cantidad de funcionalidades que Angular agrega a nuestro HTML y nosotros solo debemos llamarlas. [Hay muchas directivas que vienen por defecto con AngularJS](https://docs.angularjs.org/guide/directive){:target="_blank"} y lo mejor de todo es que nosotros podemos crear aun más (en otro post veremos cómo se hace). La directiva que usaremos repite algo con base en el número de elementos en una lista u objeto.
 
 Vamos a crear una lista de tareas pendientes con tareas predeterminadas para visualizar los datos. Agregaremos un formulario que al ser enviado ejecutará una función (definida en la directiva ng-submit) que va a tomar el valor de tareaNueva en el < input > y lo agregará a la lista.
-```html
+{% highlight html %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -244,7 +244,7 @@ Vamos a crear una lista de tareas pendientes con tareas predeterminadas para vis
 	</script>
 </body>
 </html>
-```
+{% endhighlight %}
 - [Demo](http://plnkr.co/edit/uYu4lTX6FxCjsI2DTMTj?p=preview){:target="_blank"}
 
 ###8 - Agregando estados (completado/pendiente)
@@ -253,7 +253,7 @@ Ya tenemos una lista a la que podemos agregar elementos, ahora necesitamos poder
 En el controlador: la lista de tareas $scope.tareas debe contener objetos en vez de strings (cadenas de texto) unicamente así que vamos a reemplazar cada elemento por un objeto conteniendo las propiedades "nombre" y "completada".
 
 En la vista: vamos a añadir un checkbox conectado a la propiedad "completada" del objeto que representa la tarea.
-```html
+{% highlight html %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -306,7 +306,7 @@ En la vista: vamos a añadir un checkbox conectado a la propiedad "completada" d
 	</script>
 </body>
 </html>
-```
+{% endhighlight %}
 - [Demo](http://plnkr.co/edit/e9P5ugLBWGUoLETxIr9K?p=preview){:target="_blank"}
 
 ###9 - Marcando tareas completadas con ng-class
@@ -314,7 +314,7 @@ Las tareas completadas deberían tener una apariencia diferente, vamos a usar la
 
 Creamos la clase tarea terminada dentro de una etiqueta < style > dentro de < head >
 
-```html
+{% highlight html %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -376,8 +376,38 @@ Creamos la clase tarea terminada dentro de una etiqueta < style > dentro de < he
 	</script>
 </body>
 </html>
-```
+{% endhighlight %}
 - [Demo](http://plnkr.co/edit/Nsjb73rRBaSbGQEXO2oH?p=preview){:target="_blank"}
 
 
 Creo que es suficiente por ahora ¿Comentarios?
+
+**El demo funcionando:**
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+<script>
+angular .module('listaDeCosasPorHacer', []); angular .module('listaDeCosasPorHacer') .controller('controladorPrincipal', controladorPrincipal); function controladorPrincipal($scope){ $scope.tareas = [ {nombre: "Aprender AngularJS", completada: false}, {nombre: "Dejar un comentario", completada: false}, {nombre: "No usar Internet Explorer", completada: true} ]; $scope.agregarTareaNueva = function(){ $scope.tareas.push({nombre: $scope.tareaNueva, completada: false}); $scope.tareaNueva = ''; } };
+
+</script>
+
+<div ng-app="listaDeCosasPorHacer">
+    <style>
+      .tarea-terminada {
+        text-decoration: line-through;
+      }
+    </style>
+	<div ng-controller="controladorPrincipal">
+
+		<form ng-submit="agregarTareaNueva()">
+			<input ng-model="tareaNueva">
+			<input type="submit" value="Agregar">
+		</form>
+    <hr>
+    <ul>
+      <li ng-repeat="tarea in tareas">
+        <input type="checkbox" id="{{tarea}}" ng-model="tarea.completada">
+        <label for="tarea" ng-class="{'tarea-terminada': tarea.completada}" ng-bind="tarea.nombre"></label>
+      </li>
+    </ul>
+	</div>
+</div>
