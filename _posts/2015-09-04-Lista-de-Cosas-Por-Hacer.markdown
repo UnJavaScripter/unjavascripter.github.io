@@ -28,7 +28,7 @@ Simplemente llamamos a un único script
 
 ###2 - Definir en donde vivirá nuestra aplicación AngularJS
 Algo maravilloso de AngularJS es que puede residir en conjunto con otros frameworks dentro de la misma aplicación, fácilmente podemos hacer que Angular viva dentro de un <div> sin preocuparse por lo que exista fuera de él.
-
+<!--more-->
 Para definir nuestra aplicación simplemente usamos la directiva (ya después veremos que es eso, por ahora vamos a pensar en ella como un atributo más para una etiqueta HTML) **ng-app**. Si bien podemos ubicarla dentro de cualquier contenedor html, vamos a ponerla dentro de la etiqueta < body >, de esta forma todo lo que esté dentro del cuerpo (body) de nuestr aplicación estará al alcance (en el *scope*) de AngularJS.
 
 La directiva **ng-app** requiere un valor, este será el nombre de nuestra aplicación, en nuestro caso será *listaDeCosasPorHacer*
