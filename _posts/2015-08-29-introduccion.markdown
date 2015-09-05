@@ -6,10 +6,11 @@ categories: angularjs
 comments: true
 ---
 
-##TL;DR
-```
-Vale la pena aprender AngularJS, intentaré ayudarte en el camino.
-```
+
+<div class="tl-dr">
+	<span>TL;DR</span>
+	<p>Vale la pena aprender AngularJS, intentaré ayudarte en el camino.</p>
+</div>
 
 ##AngularJS ¿Dafuq?: Introducción express de 7s
 

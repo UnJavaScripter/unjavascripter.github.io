@@ -180,7 +180,7 @@
         padding: 1.5em;
         border-left: 3px solid #f9f9f9;
             box-shadow: 0 3px 1px -2px rgba(0,0,0,.14),0 2px 2px 0 rgba(0,0,0,.098),0 1px 5px 0 rgba(0,0,0,.084);
-        transition: all 1.5s;
+        transition: all 0.8s;
         &:hover {
             border-left: 3px solid #2d9961;
         }
@@ -205,9 +205,13 @@
 .post {
     background-color: #f9f9f9;
     padding: 1.5em;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
 }
 .post-header {
     margin-bottom: $spacing-unit;
+    flex: 1;
 }
 
 .post-title {
@@ -221,8 +225,11 @@
 }
 
 .post-content {
-    margin-bottom: $spacing-unit;
+    display: flex;
+    flex-direction: column;
 
+    margin-bottom: $spacing-unit;
+    flex: 1;
     h2 {
         font-size: 32px;
 
@@ -246,4 +253,59 @@
             font-size: 18px;
         }
     }
+
+    .tl-dr {
+        display: flex;
+
+        flex: 0 0 80%;
+        flex-direction: column;
+        align-self: flex-end;
+
+        background-color: royalblue;
+        width: 50%;
+        color: white;
+        padding: 1em;
+        margin-bottom: 2em;
+        box-shadow: 0 2px 4px -1px rgba(0,0,0,.14),0 4px 5px 0 rgba(0,0,0,.098),0 1px 10px 0 rgba(0,0,0,.084);
+        
+        @include media-query($on-laptop) {
+            width: 85%;
+        }
+
+        &>span {
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+
+        &>p {
+            padding-left: 0.5em;
+        }
+
+    }
+}
+
+.continue-reading-container{
+    font-size: 1.8em;
+    margin-top: 1em;
+    border-top: 2px solid rgba(0,39,59,.08);
+    padding-top: 0.5em;
+
+    .continue-reading{
+        color: #258A96;
+        transition: color 0.8s;
+    }
+    :hover {
+        color: #45aAb6;
+    }
+}
+
+/*
+* Other stuff
+*/
+ul{
+    &>li{
+        color: #3f4549;
+        padding-bottom: 0.6em;
+    }
+    
 }
