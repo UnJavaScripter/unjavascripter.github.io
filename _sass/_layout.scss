@@ -3,9 +3,9 @@
  */
 .site-header {
     border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
-
+    min-height: 66px;
+    background-color: #2d9961;
+        box-shadow: 0 2px 4px -1px rgba(0,0,0,.14),0 4px 5px 0 rgba(0,0,0,.098),0 1px 10px 0 rgba(0,0,0,.084);
     // Positioning context for the mobile navigation icon
     position: relative;
 }
@@ -16,10 +16,10 @@
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
-
+    color: white;
     &,
     &:visited {
-        color: $grey-color-dark;
+        color: white;
     }
 }
 
@@ -32,7 +32,7 @@
     }
 
     .page-link {
-        color: $text-color;
+        color: #b9d6c3;
         line-height: $base-line-height;
 
         // Gaps between nav items, but not on the first one
@@ -162,6 +162,7 @@
  * Page content
  */
 .page-content {
+    background-color: #eaeaea;
     padding: $spacing-unit 0;
 }
 
@@ -175,6 +176,14 @@
 
     > li {
         margin-bottom: $spacing-unit;
+        background-color: #f9f9f9;
+        padding: 1.5em;
+        border-left: 3px solid #f9f9f9;
+            box-shadow: 0 3px 1px -2px rgba(0,0,0,.14),0 2px 2px 0 rgba(0,0,0,.098),0 1px 5px 0 rgba(0,0,0,.084);
+        transition: all 1.5s;
+        &:hover {
+            border-left: 3px solid #2d9961;
+        }
     }
 }
 
@@ -193,6 +202,10 @@
 /**
  * Posts
  */
+.post {
+    background-color: #f9f9f9;
+    padding: 1.5em;
+}
 .post-header {
     margin-bottom: $spacing-unit;
 }
