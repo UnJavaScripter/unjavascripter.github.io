@@ -1,11 +1,11 @@
 ---
 layout: page
-title: About
+title: Diego Coy
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Soy desarrollador "front end", o de cliente web. Me gusta experimentar con las últimas API disponibles y compartir mi conocimiento.
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+Soy organizador de [AngularJS Colombia](http://www.meetup.com/AngularJS-Colombia) y coorganizador del [GDG Bogotá](http://www.meetup.com/gdgbogota/).
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+Soy speaker desde hace algún tiempo y me dedico a difundir mi conocimiento en AngularJS y desarrollo web moderno en diferentes comunidades como grupos particulares o universidades.

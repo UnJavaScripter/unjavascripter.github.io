@@ -18,8 +18,8 @@ body {
     font-size: $base-font-size;
     line-height: $base-line-height;
     font-weight: 300;
-    color: $text-color;
-    background-color: $background-color;
+    color: $primary-text-color;
+    background-color: $page-background;
     -webkit-text-size-adjust: 100%;
 }
 
@@ -88,20 +88,90 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: $accent-color;
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: $accent-color-lighter;
     }
 
     &:hover {
-        color: $text-color;
+        color: $accent-color-darker;
         text-decoration: underline;
     }
 }
 
+a.button-like {
+    font-size: 1em;
+    padding: 0.7em;
 
+    &:hover {
+        background-color: lighten($accent-color, 40%);
+        color: $accent-color-lighter;
+        text-decoration: none;
+    }
+}
+
+.card {
+    color: $primary-text-color;
+    margin-bottom: $spacing-unit;
+    background-color: $card-background-color;
+    padding: 1em;
+    border-left: 3px solid $card-background-color;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+
+    >.card__header {
+        -webkit-box-align: flex-start;
+        -webkit-align-items: flex-start;
+        -ms-flex-align: flex-start;
+        align-items: flex-start;
+    }
+
+    >.card__content {
+
+        >.abstract {
+            -webkit-box-align: flex-start;
+            -webkit-align-items: flex-start;
+            -ms-flex-align: flex-start;
+            align-items: flex-start;
+
+            -ms-flex-align-self: baseline;
+            align-self: baseline;
+            padding-top: 1em;
+
+            >figure {
+                width: 90%;
+            }
+        }
+        
+        >.card-emoji {
+            font-size: 10em;
+        }
+
+        >.pic-placeholder {
+            min-height: 158.39px;
+            min-width: 158.39px;
+            max-height: 270px;
+            max-width: 270px;
+            background: $divider-color;
+        }
+
+        >img {
+            @extend .pic-placeholder;
+        }
+    }
+
+    >.card__actions {
+        border-top: 1px solid $grey-color-light;
+        margin-top: 0.5em;
+        padding-top: 1em;
+    }
+}
+
+
+.disabled {
+    color: $secondary-text-color;
+}
 
 /**
  * Blockquotes
@@ -206,11 +276,6 @@ pre {
 /***
  * Meeeee
  */
-
-.redd {
-    background-color: salmon!important;
-    color: red!important;
-}
 
 
 .image-center {

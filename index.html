@@ -8,8 +8,8 @@ layout: default
 
   <ul class="post-list">
     {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <li class="card" layout="column">
+        <!-- <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
@@ -22,14 +22,54 @@ layout: default
             <p class="continue-reading-container">
               <a class="continue-reading" href="{{ post.url | prepend: site.baseurl }}">Sigue leyendo...</a>
             </p>
-        {% endif %}
+        {% endif %} -->
 
+        <div class="card__header" flex layout="column">
+          <h2 flex>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
+          <span class="disabled" flex="25">{{ post.date | date: "%b %-d, %Y" }}</span>
+        </div>
+        
+        <div class="card__content" flex layout-sm="column" layout="row">
+          <div class="abstract" flex="70" layout="column">
+          {% if post.description %}
+            {{ post.description }}
+          {% else %}
+            {{ post.content }}
+          {% endif %}
+          </div>
+
+          {% if !post.emoji %}
+            <div class="card-emoji" flex="30" align="center">
+              {{ post.emoji }}
+            </div>
+          {% else %}
+            
+            {% if !post.image %}
+              <div flex="30" align="center">
+                <img src="{{ post.image }}" alt="Imagen del post" title="{{ post.title }}">
+              </div>
+            {% else %}
+              <div class="pic-placeholder" flex="30" title="{{ post.title }}">
+              </div>
+            {% endif %}
+
+          {% endif %}
+        </div>
+
+        <div class="card__actions" flex align="start">
+
+          <div class="continue-reading">
+            <a class="button-like" href="{{ post.url | prepend: site.baseurl }}">Sigue Leyendo</a>
+          </div>
+        </div>
 
 
       </li>
     {% endfor %}
   </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
 
 </div>

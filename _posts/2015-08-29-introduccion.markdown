@@ -4,6 +4,8 @@ title:  "Introducción express a AngularJS y a mi nuevo blog"
 date:   2015-08-27 21:00:50
 categories: angularjs
 comments: true
+description: "¿Qué es ese Angular del que todos hablan? ¿Qué tiene de especial? ¿Cómo empiezo a aprender?"
+image: https://camo.githubusercontent.com/641630b1dd62640270c79987287453a2c8fd73e4/687474703a2f2f7777772e77337363686f6f6c732e636f6d2f616e67756c61722f7069635f616e67756c61722e6a7067
 ---
 
 
