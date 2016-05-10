@@ -6,23 +6,10 @@ layout: default
 
   <!-- <h1 class="page-heading">Posts</h1> -->
 
-  <ul class="post-list">
+  <ul class="post-list" flex="50">
     {% for post in site.posts %}
-      <li class="card" layout="column">
-        <!-- <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <li class="card" layout="column" flex="100">
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-
-        {% if !post.noexcerpt %}
-            {{ post.content }}
-          {% else %}
-            {{ post.excerpt }}
-            <p class="continue-reading-container">
-              <a class="continue-reading" href="{{ post.url | prepend: site.baseurl }}">Sigue leyendo...</a>
-            </p>
-        {% endif %} -->
 
         <div class="card__header" flex layout="column">
           <h2 flex>

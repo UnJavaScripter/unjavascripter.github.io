@@ -173,6 +173,10 @@
 .post-list {
     margin-left: 0;
     list-style: none;
+
+    >.card {
+        text-align: justify;
+    }
 }
 
 .post-meta {
@@ -196,6 +200,10 @@
     display: flex;
     flex: 1;
     flex-direction: column;
+
+    >.card {
+        text-align: justify;
+    }
 }
 .post-header {
     margin-bottom: $spacing-unit;
