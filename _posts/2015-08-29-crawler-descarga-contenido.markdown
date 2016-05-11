@@ -12,7 +12,7 @@ emoji:  🕸
 Se ha vuelto costumre en empresas de tecnología solicitar como prueba en sus procesos de selección hacer que el candidato cree un [web crawler](https://es.wikipedia.org/wiki/Ara%C3%B1a_web). Un crawler es una aplicación que básicamente se encarga de seguir links en un sitio web y hacer algo con la información que encuentre en cada ruta, puede ser obtener todos los títulos, referencias externas, nombres, correos electrónicos, imágenes... En este post vamos a hacer un crawler que descargará contenido de una única ruta en un sitio web.
 
 
-## Set up
+## Setup
 
 Voy a usar [NodeJS](https://nodejs.org/) porque... JavaScript.
 
