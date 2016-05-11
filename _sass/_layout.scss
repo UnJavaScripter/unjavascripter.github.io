@@ -215,6 +215,7 @@
     letter-spacing: -1px;
     line-height: 1;
     text-transform: uppercase;
+    border: none;
 
     @include media-query($on-laptop) {
         font-size: 36px;
