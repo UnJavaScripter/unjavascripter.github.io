@@ -5,7 +5,7 @@ date:   2016-05-12 12:32:10
 categories: js, typescript
 lvl: intro
 comments: true
-description: "TypeScript es un 'superset' de JavaScript que añade ciertas funcionalidades a nuestro código como, tipos de dato definidos e interfaces. Angular 2 está hecho en TypeScript, por lo tanto vale la pena aprender un poco. Esta guía está dirigida a personas que no han pasado por lenguajes como Java o C# (para ellos esto de TypeScript resulta muy familiar)."
+description: "TypeScript es un 'superset' de JavaScript que añade ciertas funcionalidades a nuestro código, como tipos de dato definidos e interfaces. Angular 2 está hecho en TypeScript, por lo tanto vale la pena aprender un poco. Esta guía está dirigida a personas que no han pasado por lenguajes como Java o C# (para ellos esto de TypeScript resulta muy familiar)."
 image: https://s.gravatar.com/avatar/17e414f1d3c2a1c190a1fe04d9850286?size=225&default=retro
 ---
 
@@ -16,7 +16,7 @@ TypeScript es un 'superset' de JavaScript que añade ciertas funcionalidades a n
 
 Básicamente funciona así:
 
-1. Creas un archivo te texto con extensión `ts` _miAplicacion.ts_
+1. Creas un archivo de texto con extensión `ts` _miAplicacion.ts_
 1. Escribes código en el formato de TypeScript dentro de tu archivo
 1. Compilas tu archivo usando el compilador de TypeScript
 1. Se genera un archivo con extensión `js` _miAplicacion.js_
@@ -31,7 +31,7 @@ Existen [varios plugins para TypeSctipt](https://www.typescriptlang.org/index.ht
 
 ### Ejecutando el compilador de TypeScript
 
-Tras instalar TypeSctipt tendremos disponible en nuestra termial el programa `tsc`, TypeScript Compiler, con el comando:
+Tras instalar TypeScript tendremos disponible en nuestra terminal el programa `tsc`, TypeScript Compiler, con el comando:
 
 `$ tsc nombreDelArchivo.ts --watch`
 
