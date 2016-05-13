@@ -35,7 +35,7 @@ Tras instalar TypeScript tendremos disponible en nuestra terminal el programa `t
 
 `$ tsc nombreDelArchivo.ts --watch`
 
-Le decimos a TypeScript compiler que compile `nombreDelArchivo.ts` a `nombreDelArchivo.js`. Así mismo con el parámetro `--watch` le decimos que este atento a cualquier cambio y realice la compilación en cada caso.
+Le decimos a TypeScript Compiler que compile `nombreDelArchivo.ts` a `nombreDelArchivo.js`. Así mismo con el parámetro `--watch` le decimos que esté atento a cualquier cambio y realice la compilación en cada caso.
 
 
 ## Tipos
@@ -54,7 +54,7 @@ let alertar = (mensaje) => {
 
 TypeScript nos permite definir tipos estrictos:
 
-Podemos llamar a la función `alertar` y pasar cualquier valor como mensaje. Sin embargo tiene más sentido que la función reciba únicamente cadenas de texto (_strings_):
+Podemos llamar a la función `alertar` y pasar cualquier valor como mensaje. Sin embargo, tiene más sentido que la función reciba únicamente cadenas de texto (_strings_):
 
 
 ```js
@@ -64,7 +64,7 @@ let alertar = (mensaje: string) => {
 ```
 
 
-Y eso es todo. Como te podrás imaginar si se quieren otros tipos de datos como números o valores _booleanos_ tan solo hay que reemplazarlo sobre el _string_ que pusimos:
+Y eso es todo. Como te podrás imaginar si se quieren otros tipos de datos como números o valores _booleanos_ tan solo hay que reemplazarlo sobre el _string_ que usamos:
 
 
 ```js
@@ -104,7 +104,7 @@ De esta forma volvemos al ejemplo inicial con JavaScript de toda la vida en dond
 
 ## Interfaces
 
-Una interfaz nos permite modelar la forma de un objeto:
+Una _interfaz_ nos permite modelar la forma de un objeto:
 
 
 ```js
@@ -116,10 +116,10 @@ interface Zapato {
 ```
 
 
-Ahora podemos definir un objeto y especificar que debe tener la forma de `Zapato`, es decir, **extender** la interfaz.
+Ahora podemos definir un objeto y especificar que debe tener la forma de `Zapato`, es decir, **extender** la _interfaz_.
 
 
-Usando el ejemplo anterior con la función `alertar` limitamos el tipo del mensaje para validar que concuerde con la estructura que se define en la interfaz `Zapato`:
+Usando el ejemplo anterior con la función `alertar` limitamos el tipo del mensaje para validar que concuerde con la estructura que se define en la _interfaz_ `Zapato`:
 
 
 ```js
@@ -137,10 +137,10 @@ alertar({marca: 'Patito', numero: 42, deprotivo: true});
 ```
 
 
-Si pasaramos un argumento de más o nos faltara uno, TypeScript nos lo dejará saber con un error.
+Si pasaramos un argumento de más o nos faltara uno, TypeScript nos lo hará saber con un error.
 
 
-Podemos tener propiedades opcionales dentro de una interfaz:
+Podemos tener propiedades opcionales dentro de una _interfaz_:
 
 
 ```js
@@ -153,14 +153,14 @@ interface ITelefono {
 ```
 
 
-Aquí podemos pasar un número en la propiedad `ranurasParaSIMCard` o no pasar un valor en absoluto. Algo a notar también es que en este ejemplo definí la interfaz como `I` `NombreDeLaInterfaz`, esta nomenclatura suele encontrarse en Internet y es eso, sólo una forma de escribir los nombres de las interfaces.
+Aquí podemos pasar un número en la propiedad `ranurasParaSIMCard` o no pasar un valor en absoluto. Algo a notar también es que en este ejemplo definí la _interfaz_ como `I` `NombreDeLaInterfaz`, esta nomenclatura suele encontrarse en Internet y es eso, sólo una forma de escribir los nombres de las interfaces.
 
-Finalmente cabe notar que la interfaz por sí sola no hace nada en nuestro código final (js), es únicamente una restricción que establecemos durante el desarrollo de nuestro código TypeScript. Si intentaramos compilar la definición de la interfaz terminaríamos con un archivo JavaScript vacío.
+Finalmente, cabe notar que la _interfaz_ por sí sola no hace nada en nuestro código final (js), es únicamente una restricción que establecemos durante el desarrollo de nuestro código TypeScript. Si intentaramos compilar la definición de la _interfaz_ terminaríamos con un archivo JavaScript vacío.
 
 
 ## Ejemplo
 
-Finalmente llegamos al ejemplo que tanto esperabas (🙄): código que integra lo que hemos visto hasta ahora. Este ejemplo usa el concepto de clases, si no lo tienes muy claro puedes visitar la [documentación de Mozilla para este tema](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Classes).
+Ahora sí llegamos al ejemplo que tanto esperabas (🙄): código que integra lo que hemos visto hasta ahora. Este ejemplo usa el concepto de clases, si no lo tienes muy claro puedes visitar la [documentación de Mozilla para este tema](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Classes).
 
 ```js
 interface IPokemon {
@@ -204,14 +204,14 @@ let snorlax = new Pokemon({ nombre: "Snorlax", sonido: "Snoooor-laax", dormido: 
 snorlax.hacerHablar();
 ```
 
-1. Definimos una interfaz con una propiedad opcional
+1. Definimos una _interfaz_ con una propiedad opcional
 1. Definimos una clase que tiene:
     1. Una referencia a un objeto _principal_
     1. Un método _getter_ para consultar nuestro objeto _principal_
     1. Un método para escribir nuestro objeto _principal_
     1. Un método para ejecutar una acción
     1. Un constructor que:
-        1. Recibe como parámetro un objeto que debe tener la forma especificada por la interfaz
+        1. Recibe como parámetro un objeto que debe tener la forma especificada por la _interfaz_
         1. Invoca al método _set_ para escribir el objeto _principal_
 1. Una instancia de la clase
 1. La invocación del método destinado a ejecutar una acción
