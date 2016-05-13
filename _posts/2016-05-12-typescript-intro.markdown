@@ -206,13 +206,13 @@ snorlax.hacerHablar();
 
 1. Definimos una interfaz con una propiedad opcional
 1. Definimos una clase que tiene:
-  1. Una referencia a un objeto _principal_
-  1. Un método _getter_ para consultar nuestro objeto _principal_
-  1. Un método para escribir nuestro objeto _principal_
-  1. Un método para ejecutar una acción
-  1. Un constructor que:
-    1. Recibe como parámetro un objeto que debe tener la forma especificada por la interfaz
-    1. Invoca al método _set_ para escribir el objeto _principal_
+    1. Una referencia a un objeto _principal_
+    1. Un método _getter_ para consultar nuestro objeto _principal_
+    1. Un método para escribir nuestro objeto _principal_
+    1. Un método para ejecutar una acción
+    1. Un constructor que:
+        1. Recibe como parámetro un objeto que debe tener la forma especificada por la interfaz
+        1. Invoca al método _set_ para escribir el objeto _principal_
 1. Una instancia de la clase
 1. La invocación del método destinado a ejecutar una acción
 1. Una instancia de la clase
