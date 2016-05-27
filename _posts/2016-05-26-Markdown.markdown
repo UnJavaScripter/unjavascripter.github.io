@@ -199,10 +199,16 @@ Cosa 1 | valor x | valor s
 Cosa 2 | valor z | valor a
 ```
  
+
 Encabezado | Otro | Otro más
 :---: | :--- | ---:
 Cosa 1 | valor x | valor s
 Cosa 2 | valor z | valor a
+
+
+
+
+
 
 
 Eso es todo por ahora ¿Comentarios?
