@@ -40,7 +40,7 @@ _Texto en cursiva_
 *cursiva*
 ```
 
-Ten en cuenta que la práctica más común es usar los guiones bajos (`_`) para representar cursiva, el asterísco (`*`) se suele usar para escribir texto en negrita/negrilla.
+Ten en cuenta que la práctica más común es usar los guiónes bajos (`_`) para representar cursiva, el asterísco (`*`) se suele usar para escribir texto en negrita/negrilla.
 
 
 ### Negrilla
@@ -98,7 +98,7 @@ Esto resulta particularmente útil a la hora de agregar un elemento en la mitad 
 1. Conseguirlo
 1. Seguir con otro post
 
-Podemos agregar o quitar cuántos elementos querramos y no tenemos que cambiar los números de línea a mano (muy útil).
+Podemos agregar o quitar cuántos elementos queramos y no tenemos que cambiar los números de línea a mano (muy útil).
 
 
 ### No ordenadas
@@ -120,9 +120,9 @@ Este es fácil: usamos `*`, `+` o `-` seguido de un espacio:
 * B
 * E
 
-### Listas anidadas y combinaciónes
+### Listas anidadas y combinaciones
 
-Podemos anidar elementos de lista poniéndo agregando espacios, uno es suficiente pero se ve mejor en el código si trabajamos con dos espacios:
+Podemos anidar elementos de lista poniendo agregando espacios, uno es suficiente pero se ve mejor en el código si trabajamos con dos espacios:
 
 ```
 - Lorem
@@ -192,7 +192,7 @@ Y como ves tenemos el mismo resultado, el segundo caso es especialmente útil cu
 
 ## Imágenes
 
-Partimos de un lik y agregamos un `!` al principio:
+Partimos de un link y agregamos un `!` al principio:
 
 ```
 ![Logo de AngularJS](https://cloud.githubusercontent.com/assets/7959823/15593033/26780722-236e-11e6-8b9b-6872ab575fcb.jpg)
