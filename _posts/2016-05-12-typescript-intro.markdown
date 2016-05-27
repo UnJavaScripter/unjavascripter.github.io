@@ -6,7 +6,7 @@ categories: js, typescript
 lvl: intro
 comments: true
 description: "TypeScript es un 'superset' de JavaScript que añade ciertas funcionalidades a nuestro código, como tipos de dato definidos e interfaces. Angular 2 está hecho en TypeScript, por lo tanto vale la pena aprender un poco. Esta guía está dirigida a personas que no han pasado por lenguajes como Java o C# (para ellos esto de TypeScript resulta muy familiar)."
-image: https://s.gravatar.com/avatar/17e414f1d3c2a1c190a1fe04d9850286?size=225&default=retro
+image: https://cloud.githubusercontent.com/assets/7959823/15593025/0f57a2c8-236e-11e6-9670-eced2b4bc0cd.png
 ---
 
 

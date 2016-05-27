@@ -1,0 +1,310 @@
+---
+layout: post
+title:  "Aprende a escribir Markdown"
+date:   2016-05-26 18:04:50
+categories: general
+lvl: basic
+comments: true
+description: "¿Has visto los archivos README de hoy en día? Ya no tienen extensión txt, ahora son archivos .md, esta es la extensión de los archivos Markdown. Markdown es un 'lenguage de markup' como HTML, nos permite crear texto con algunos estilos de forma rápida y sencilla.
+  
+Markdown es muy flexible y hoy en día lo encontramos cada vez más en diferentes tipos de aplicaciones, de hecho este blog está escrito en markdown."
+image: https://cloud.githubusercontent.com/assets/7959823/15593017/fb18baae-236d-11e6-833f-8f7b33d6cc51.jpg
+---
+
+
+Piensa en Markdown como una abstracción de HTML, básicamente te permite escribir elementos HTML con un par de caracteres. Vamos al código.
+
+
+## Headers
+
+```
+# Este texto tendrá el formato de un elemento <h1>
+## Este es equivalente a un <h2>
+### Adivinaste, este representa un <h3>
+...
+###### Así es, si pones 6 'numerales' o 'alhomadillas' obtienes el equivalente al estilo de un elemento <h6>
+
+```
+
+
+## Estilos de texto
+
+
+### Cursiva
+
+Si ponemos _un_ `_` o _un_ `*` al principio y al final de una palabra o frase, se aplicará un elemento `<i>`
+
+```
+_Texto en cursiva_
+
+*cursiva*
+```
+
+Ten en cuenta que la práctica más común es usar los guiones bajos (`_`) para representar cursiva, el asterísco (`*`) se suele usar para escribir texto en negrita/negrilla.
+
+
+### Negrilla
+
+Si ponemos **dos** `_` o **dos** `*` al principio y al final de una palabra o frase, se aplicará un elemento `<b>`
+
+```
+__Un texto que está en negrilla__
+
+**negrita**
+```
+
+Como ya sabemos por el aparte anterior, lo mejor es limitarnos a usar `*` para negrillas y dejar `_` para la letra _itálica_,
+
+Tal y como habrás notado lo importante en este par de estilos es la cantidad de elementos y no el símbolo que se use, como ves son permutables.
+
+
+### Listas
+
+
+### Ordenadas
+
+Podemos enumerar líneas seguidas de un `.` y un espacio:
+
+```
+1. Leer post
+2. Escribir Markdown
+3. Seguir con otro post
+
+```
+
+1. Leer post
+2. Escribir Markdown
+3. Seguir con otro post
+
+
+Sin embargo resulta mejor usar `1. ` en todos los casos para enumerar las líneas ya que el _compilador_ de igual forma entenderá que hablamos de una lista y asignará los números correspondientes dinámicamente.
+
+Esto resulta particularmente útil a la hora de agregar un elemento en la mitad de una lista extensa:
+
+```
+1. Leer post
+1. Practicar
+1. Fallar
+1. Volver a intentar
+1. Conseguirlo
+1. Seguir con otro post
+
+```
+
+1. Leer post
+1. Practicar
+1. Fallar
+1. Volver a intentar
+1. Conseguirlo
+1. Seguir con otro post
+
+Podemos agregar o quitar cuántos elementos querramos y no tenemos que cambiar los números de línea a mano (muy útil).
+
+
+### No ordenadas
+
+Este es fácil: usamos `*`, `+` o `-` seguido de un espacio:
+
+```
++ Lorem
++ Ipsum
++ A
++ B
++ E
+
+```
+
+* Lorem
+* Ipsum
+* A
+* B
+* E
+
+### Listas anidadas y combinaciónes
+
+Podemos anidar elementos de lista poniéndo agregando espacios, uno es suficiente pero se ve mejor en el código si trabajamos con dos espacios:
+
+```
+- Lorem
+  * Ipsum
+    + Dolor
+      1. Sit
+        + Amet
+            - Bla
+            - Bla bla bla
+      1. Ok
+  - Algo
++ Plantas
+  * Rosaceae
+    1. Manzana
+    1. Fresa
+  + Anacardiaceae
+    + Mango
+```
+
++ Lorem
+  - Ipsum
+    * Dolor
+      1. Sit
+        * Amet
+            + Bla
+            + Bla bla bla
+      1. Ok
+  + Algo
+* Plantas
+  - Rosaceae
+    1. Manzana
+    1. Fresa
+  * Anacardiaceae
+    * Mango
+
+
+Si miras en detalle notarás que el símbolo que usemos para representar el elemento de lista no afecta la presentación, la decoración depende de _la anidación_. Lo mejor es usar un sólo símbolo para representar listas no ordenadas.
+
+
+## Enlaces / links
+
+Podemos definir el link inmediatamente:
+
+```
+[Un link, enlace, ancla o anchor...](https://unjavascripter.github.io)
+```
+
+[Un link, enlace, ancla o anchor...](https://unjavascripter.github.io)
+
+O crear una variable y definir su valor en otro punto del documento:
+
+```
+[Un link, enlace, ancla o anchor...](blogDeJavaScript)
+
+
+...
+
+[blogDeJavaScript]: https://unjavascripter.github.io
+```
+
+[Un link, enlace, ancla o anchor...](blogDeJavaScript)
+
+[blogDeJavaScript]: https://unjavascripter.github.io
+
+Y como ves tenemos el mismo resultado, el segundo caso es especialmente útil cuando tenemos varios enlaces apuntando a la misma url.
+
+
+## Imágenes
+
+Partimos de un lik y agregamos un `!` al principio:
+
+```
+![Logo de AngularJS](https://cloud.githubusercontent.com/assets/7959823/15593033/26780722-236e-11e6-8b9b-6872ab575fcb.jpg)
+```
+
+![Logo de AngularJS](https://cloud.githubusercontent.com/assets/7959823/15593033/26780722-236e-11e6-8b9b-6872ab575fcb.jpg)
+
+
+El texto dentro de `[]` será el que se mostrará si la imagen no está disponible:
+
+![Logo de AngularJS](https://tutorial.gratis.aprende.todo.en.una.hora.y.gana.dinero.jpg)
+
+
+## _Quotes_
+
+```
+
+
+> Hodor!
+> - Hodor
+
+
+```
+
+
+## Código
+
+### Una línea
+
+```
+    `let obj = "obejota";`
+```
+
+### Múltiples líenas
+
+```
+    ```
+        let obj = "obejota";
+
+        const e = e => e;
+
+        let x = 123;
+
+    ```
+```
+
+
+#### Lenguaje
+
+Podemos especificar el lenguaje del código que estamos escribiendo para obtener _color highlighting_
+
+```
+    ```js
+    let obj = "obejota";
+
+    const e = e => e;
+
+    let x = 123;
+
+    ```
+
+    o
+
+    ```css
+    body {
+        color: #666;
+    }
+    ```
+```
+
+Se vería así:
+
+```js
+let obj = "obejota";
+
+const e = e => e;
+
+let x = 123;
+
+```
+
+
+```css
+body {
+    color: #666;
+}
+```
+
+## Tablas
+
+La primera línea representa los encabezados para cada columna, separados entre sí con `|`.
+
+La segunda línea establece la separación entre encabezado y contenido. Cada segmento debe tener al menos 3 guiónes `---`. Los _dos puntos_ `:` indican hacia donde debe alinearse el texto:
+
+ * Izquierda `:---`
+ * Derecha `---:`
+ * Centrado `:---:`.
+
+
+Desde la tercera línea va el contenido.
+
+
+```
+Encabezado | Otro | Otro más
+ ---: | ---: | :---:
+Cosa 1 | valor x | valor s
+Cosa 2 | valor z | valor a
+```
+
+Encabezado | Otro | Otro más
+:---: | :--- | ---:
+Cosa 1 | valor x | valor s
+Cosa 2 | valor z | valor a
+
+
