@@ -234,6 +234,26 @@ pre {
     }
 }
 
+/**
+ * Table
+ */
+
+table {
+    border-spacing: 1px;
+    
+    thead {
+        background: #3f51b5;
+        color: white;
+    }
+
+    tbody {
+        tr:nth-child(even) {
+            background: #f1f1f1;
+        }
+    }
+}
+
+
 
 
 /**
