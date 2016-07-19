@@ -1,14 +1,19 @@
 ---
 layout: default
 ---
-<div class="post card" flex-xs="100" flex-sm="90" flex="70">
+
+
+<!--This is the actual post, the one you read, the view for '/post-name'-->
+
+
+<div class="post" flex="100">
 
   <header class="post-header">
     <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
     <h2 class="post-title">{{ page.title }}</h2>
   </header>
 
-  <article class="post-content">
+  <article>
     {{ content }}
   </article>
 

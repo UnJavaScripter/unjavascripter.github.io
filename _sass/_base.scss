@@ -1,312 +1,30 @@
-/**
- * Reset some basic elements
- */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
-    margin: 0;
-    padding: 0;
-}
-
-
-h2, h3, h4, h5, h6 {
-  font-family: 'Ubuntu', sans-serif;
-}
-
-h2, h3, h4, h5, h6 {
-  border-bottom: 1px dashed gray;
-  margin-top: 1em;
-}
-
-
-/**
- * Basic styling
- */
 body {
-    font-family: $base-font-family;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    font-weight: 300;
-    color: $primary-text-color;
-    background-color: $page-background;
-    -webkit-text-size-adjust: 100%;
+  background: #23232c;
+  color: #e0e0e0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 
 
-/**
- * Set `margin-bottom` to maintain vertical rhythm
- */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
-%vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
-}
-
-
-
-/**
- * Images
- */
-img {
-    max-width: 100%;
-    vertical-align: middle;
-}
-
-
-
-/**
- * Figures
- */
-figure > img {
-    display: block;
-}
-
-figcaption {
-    font-size: $small-font-size;
-}
-
-
-
-/**
- * Lists
- */
-ul, ol {
-    margin-left: $spacing-unit;
-}
-
-li {
-    > ul,
-    > ol {
-         margin-bottom: 0;
-    }
-}
-
-
-
-/**
- * Headings
- */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
-}
-
-
-button {
-  background: none;
-  border: none;
-  font-size: 1em;
-}
-
-
-
-/**
- * Links
- */
 a {
-    color: $accent-color;
-    text-decoration: none;
-
-    &:visited {
-        color: $accent-color-lighter;
-    }
-
-    &:hover {
-        color: $accent-color-darker;
-        text-decoration: underline;
-    }
+  color: #007feb;
 }
-
-a.button-like {
-    font-size: 1em;
-    padding: 0.7em;
-
-    &:hover {
-        background-color: lighten($accent-color, 40%);
-        color: $accent-color-lighter;
-        text-decoration: none;
-    }
-}
-
-.card {
-    text-align: start;
-    color: $primary-text-color;
-    margin-bottom: $spacing-unit;
-    background-color: $card-background-color;
-    padding: 1em;
-    border-left: 3px solid $card-background-color;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-
-    >.card__header {
-        -webkit-box-align: flex-start;
-        -webkit-align-items: flex-start;
-        -ms-flex-align: flex-start;
-        align-items: flex-start;
-    }
-
-    >.card__content {
-
-        >.abstract {
-            -webkit-box-align: flex-start;
-            -webkit-align-items: flex-start;
-            -ms-flex-align: flex-start;
-            align-items: flex-start;
-
-            -ms-flex-align-self: baseline;
-            align-self: baseline;
-            padding-top: 1em;
-
-            >figure {
-                width: 90%;
-            }
-        }
-        
-        >.card-emoji {
-            font-size: 10em;
-        }
-
-        >.pic-placeholder {
-            min-height: 158.39px;
-            min-width: 158.39px;
-            max-height: 270px;
-            max-width: 270px;
-            background: $divider-color;
-        }
-
-        >img {
-            @extend .pic-placeholder;
-        }
-    }
-
-    >.card__actions {
-        border-top: 1px solid $grey-color-light;
-        margin-top: 0.5em;
-        padding-top: 1em;
-    }
-}
-
-
-.disabled {
-    color: $secondary-text-color;
-}
-
-/**
- * Blockquotes
- */
-blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;
-    font-style: italic;
-
-    > :last-child {
-        margin-bottom: 0;
-    }
-}
-
-
-
-/**
- * Code formatting
- */
-pre,
-code {
-    font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #eef;
-}
-
-code {
-    padding: 1px 5px;
-}
-
-pre {
-    padding: 8px 12px;
-    overflow-x: auto;
-
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
-}
-
-/**
- * Table
- */
-
-table {
-    border-spacing: 1px;
-    margin-bottom: 1em;
-
-    thead {
-        background: #3f51b5;
-        color: white;
-    }
-
-    tbody {
-        tr:nth-child(even) {
-            background: #f1f1f1;
-        }
-    }
-}
-
-
-
-
-/**
- * Wrapper
- */
-.wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-    @extend %clearfix;
-
-    @include media-query($on-laptop) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
-    }
-}
-
-
-
-/**
- * Clearfix
- */
-%clearfix {
-
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
-
 
 /**
  * Icons
  */
 .icon {
 
-    > svg {
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        vertical-align: middle;
+  > svg {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
 
-        path {
-            fill: $grey-color;
-        }
+    path {
+      fill: #c3c3c3;
     }
+  }
 }
 
 
@@ -316,6 +34,6 @@ table {
 
 
 .image-center {
-    display: block;
-    margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }

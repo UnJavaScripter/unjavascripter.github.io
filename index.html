@@ -2,59 +2,33 @@
 layout: default
 ---
 
-<div class="home">
-
-  <ul class="post-list" flex-xs="95" flex-sm="75" flex="60">
-    {% for post in site.posts %}
-      <li class="card" layout="column" flex="100">
+<!--This is the showcase, the main view, the view for '/'-->
 
 
-        <div class="card__header" flex layout="column">
-          <h2 flex>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          </h2>
-          <span class="disabled" flex-xs="100" flex="25">{{ post.date | date: "%b %-d, %Y" }}</span>
-        </div>
-        
-        <div class="card__content" flex layout-xs="column" layout="row">
-          <div class="abstract" flex-xs="95" flex="70">
-          {% if post.description %}
-            {{ post.description }}
-          {% else %}
-            {{ post.content }}
-          {% endif %}
+  <div class="content" flex="95" align="center">
+      {% for post in site.posts %}
+        <article class="post-showcase">
+          <div class="post-showcase-things">
+            <h3>{{ post.date | date: "%b %-d, %Y" }}</h3>
           </div>
 
-          {% if !post.emoji %}
-            <div class="card-emoji" flex-xs="100" flex="30" align="center">
-              {{ post.emoji }}
-            </div>
-          {% else %}
-            
-            {% if !post.image %}
-              <div flex-xs="100" flex="30" align="center">
-                <img src="{{ post.image }}" alt="Imagen del post" title="{{ post.title }}">
-              </div>
-            {% else %}
-              <div class="pic-placeholder" flex="30" title="{{ post.title }}">
-              </div>
-            {% endif %}
-
-          {% endif %}
-        </div>
-
-        <div class="card__actions" flex align="start">
-
-          <div class="continue-reading">
-            <a class="button-like" href="{{ post.url | prepend: site.baseurl }}">Sigue Leyendo</a>
+          <div class="post-showcase-content">
+            <a href="{{ post.url | prepend: site.baseurl }}">
+              <h2>{{ post.title }}</h2>
+            </a>
+            <p>
+              {% if post.description %}
+                {{ post.description }}
+              {% else %}
+                {{ post.content }}
+              {% endif %}
+            </p>
           </div>
-        </div>
+        </article>
+      {% endfor %}
 
-
-      </li>
-    {% endfor %}
-  </ul>
+  </div>
+  
 
   <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
 
-</div>

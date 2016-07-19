@@ -1,0 +1,10 @@
+{
+  "short_name": "unJS", 
+  "name": "unJS blog",
+  
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#1c1c23",
+  "background_color": "#1c1c23",
+  "start_url": "./index.html?o=i"
+}
