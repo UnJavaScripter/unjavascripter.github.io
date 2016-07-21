@@ -3,6 +3,7 @@ $color_background: #23232c;
 
 $color_accent: #007feb;
 $color_accent_darker: #2a587f;
+$color_accent_lighter: #6495ed;
 
 body {
   background: $color_background;
@@ -24,6 +25,20 @@ a {
     text-decoration: none;
   }
 
+}
+
+/**
+ * Custom Stuff
+ */
+
+.tl-dr {
+  margin-top: -4em;
+  
+  &>.tl-dr-content {
+    background: rgba(0,0,0,0.2);
+    padding: 1em;
+    margin: 1em;
+  }
 }
 
 

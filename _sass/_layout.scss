@@ -69,8 +69,12 @@ article.post-showcase {
   margin-top: 4.5em;
   padding-top: 0.7em;
   text-transform: uppercase;
+
 }
 
+.post>article>h2:first-of-type {
+  margin-top: 0em;
+}
 
 /*
 @
@@ -95,6 +99,12 @@ article.post-showcase {
     @media (min-width: 600px) and (max-width: 959px) {
       margin-left: -3em;
     } 
+  }
+
+  &>.post-header {
+    &>.post-title {
+      color: $color_accent_lighter;
+    }
   }
 }
 

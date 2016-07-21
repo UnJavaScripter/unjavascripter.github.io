@@ -8,13 +8,14 @@ description: "¿Qué es ese Angular del que todos hablan? ¿Qué tiene de especi
 image: https://cloud.githubusercontent.com/assets/7959823/15593033/26780722-236e-11e6-8b9b-6872ab575fcb.jpg
 ---
 
-
-<div class="tl-dr">
-	<span>TL;DR</span>
-	<p>Vale la pena aprender AngularJS, intentaré ayudarte en el camino.</p>
+<div class="tl-dr" flex layout="row" layout-align="end end">
+	<div class="tl-dr-content" flex="33">
+		<span>TL;DR</span>
+		<p>Vale la pena aprender AngularJS, intentaré ayudarte en el camino.</p>
+	</div>
 </div>
 
-##AngularJS ¿Dafuq?: Introducción express de 7s
+## AngularJS ?¡?¿¡?¿¿?: Introducción express de 7s
 
 ( * Leer en 7s o menos * ) [AngularJS][angularjsSite] es un [framework][framework] para desarrollo de aplicaciones del lado del cliente (para navegadores) creado por un equipo de gente en Google. Tiene una comunidad muy grande y cada vez va ganando más popularidad.
 
@@ -22,7 +23,7 @@ image: https://cloud.githubusercontent.com/assets/7959823/15593033/26780722-236e
 
 Un framework es un 'marco de trabajo/para trabajar' (?) traducido literalmente, y básicamente es lo que Angular no da, nos proporciona una gran cantidad de cosas fantásticas para hacer en nuestra aplicación web, solo tienes que aprender a usar este marco, las herramientas que nos pone y cómo aprovecharlas.
 
-##Ujumm y ¿Que tiene de particular? ¿Qué lo hace taaaan 'especial'?
+## Ujumm y ¿Que tiene de particular? ¿Qué lo hace taaaan 'especial'?
 
 - Data binding: si cambio un valor aquí, el valor se actualiza automáticamente allá [y del mismo modo en el sentido contrario][delMismoModo]
 <!--more-->
@@ -31,10 +32,10 @@ Un framework es un 'marco de trabajo/para trabajar' (?) traducido literalmente, 
 - Directivas: son algo así como plugins muy completos y organizados
 - Inyección de dependencias: algo así como "tu decides cuando 'importas' este plugin o 'libreriá'"
 
-##No sé, suena demasiado complicado
+## No sé, suena demasiado complicado
 Primero cambia esa actitud, me estoy esforzando para explicarlo. Un poco de ayuda de tu parte nos beneficiaría a los dos (bueno a ti, yo ya usé mi tiempo escribiendo esto y ya sé algo de AngularJS)
 
-##Ok, ok. Suena fantabuloso y quiero aprenderlo... ¿Cómo hago? :D
+## Ok, ok. Suena fantabuloso y quiero aprenderlo... ¿Cómo hago? :D
 Mucha gente piensa que aprender a usar AngularJS es difícil. Tienen razón. Si empiezan por leer la documentación del sitio oficial, [angularjs.org][angularjsTutorial] o deciden buscar entender por que es MVW y que es MVC o MVW. Me parece que lo mejor es verlo en la práctica y experimentar con él, como cuando iniciaste la adolescencia. Así vas a entender todo lo que puedes hacer con él y lo fácil que es usarlo... Así mismo puedes aprender los riesgos que conlleva no usarlo con responsabilidad.
 
 ### ¿Entonces cómo hago?
