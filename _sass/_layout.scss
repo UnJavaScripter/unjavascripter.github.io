@@ -8,21 +8,26 @@ section.bam {
   background-color: rgba(0,0,0,0.2);
   background-size: cover;
   background-position: -56px, 128px, -72px;
-  display: flex;
-  flex: 0 0 auto;
+
   justify-content: center;
 
-  >img {
+  >div>a>img {
     border-radius: 50%;
     height: 7em;
-    flex: 0 0 auto;
-    align-self: center;
+    max-width: 7em;
   }
 
 }
 
 main{
-   margin-bottom: 5em;
+  margin-bottom: 5em;
+  min-height: calc(100% - 142px);
+  &:after {
+    content: "";
+    display: block;
+    height: 140px;
+  }
+  
   div.content {
     margin-top: 2em;
   }
@@ -57,6 +62,13 @@ article.post-showcase {
       font-weight: 100; 
     }
   }
+}
+
+.post>article>h2 {
+  border-top: 1px solid #4b4bc7;
+  margin-top: 4.5em;
+  padding-top: 0.7em;
+  text-transform: uppercase;
 }
 
 
@@ -99,8 +111,36 @@ article.post-showcase {
 @
 */
 
+
 footer {
   background: rgba(0,0,0,0.4);
   padding: 1em;
   margin-bottom: -0.8em;
+  height: 100%;
+  
+
+  .footer-stuff-container {
+    margin-left: 30%;
+    &>pre{
+      width: 70%;
+      padding: 1em;
+    }
+
+    @media screen and (max-width: 599px){
+      margin-left: 3%;
+      &>pre{
+        width: 92%;
+      }
+    }
+
+    @media (min-width: 600px) and (max-width: 959px){
+      margin-left: 5%;
+      &>pre{
+        width: 90%;
+      }
+    }
+  }
 }
+
+
+

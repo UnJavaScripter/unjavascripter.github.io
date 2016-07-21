@@ -1,14 +1,32 @@
+$color_text: #e0e0e0;
+$color_background: #23232c;
+
+$color_accent: #007feb;
+$color_accent_darker: #2a587f;
+
 body {
-  background: #23232c;
-  color: #e0e0e0;
+  background: $color_background;
+  color: $color_text;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
 }
 
 
 a {
-  color: #007feb;
+  color: $color_accent;
+
+  &:visited {
+    color: $color_accent_darker;
+  }
+
+  &.link-nostyle{
+    color: $color_text;
+    text-decoration: none;
+  }
+
 }
+
+
 
 /**
  * Icons
