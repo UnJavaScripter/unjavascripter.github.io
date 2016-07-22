@@ -1,7 +1,23 @@
 {
-  "short_name": "unJS", 
-  "name": "unJS blog",
-  
+  "short_name": "unJS - blog", 
+  "name": "UnJavaScripter - blog",
+   "icons": [
+    {
+      "src": "logo_48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "logo_96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "logo_192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
   "display": "standalone",
   "orientation": "portrait",
   "theme_color": "#1c1c23",
