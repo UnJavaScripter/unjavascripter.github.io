@@ -43,7 +43,9 @@ Ahora podemos crear el archivo `manifest.json` (puede tener un nombre diferente 
   ],
   "start_url": "index.html?origin=installed",
   "background_color": "#ffd301",
-  "theme_color": "#0ff"
+  "theme_color": "#0ff",
+  "display": "standalone",
+  "orientation": "portrait"
 }
 
 ```
@@ -77,5 +79,13 @@ Fondo de pantalla que aparecerá mientras la aplicación carga (aplica para ejec
 
 Establece el color de fondo de la interfaz de Chrome en dispositivos móviles.
 
+### "display"
 
-  
+Especifica al navegador cómo queremos que se vea nuestra aplicación al ejecutarla desde el escritorio:
+
+- standalone: pantalla completa, sin barra de navegación
+- browser: normal, dentro del navegador
+
+### "orientation"
+
+La orientación de la aplicación, `portrait` es vertical y `landscape` horizontal
