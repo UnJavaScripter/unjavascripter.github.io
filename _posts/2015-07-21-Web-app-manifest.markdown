@@ -14,11 +14,11 @@ Empecemos por 'llamar' al archivo manifest que crearemos en el siguiente paso:
 
 `<link rel="manifest" href="manifest.json">`
 
-Como ves, usamos la etiqueta `link` como si fueramos a referenciar una hoja de estilos `CSS`, sólo que cambiamos el valor del atributo `rel` a `manifest`. Con esto el navegador entenderá que nos referimos a un _manifiesto_
+Como ves, usamos la etiqueta `link` como si fuéramos a referenciar una hoja de estilos `CSS`, sólo que cambiamos el valor del atributo `rel` a `manifest`. Con esto el navegador entenderá que nos referimos a un _manifiesto_
 
 ## 2. El archivo 'manifest'
 
-Ahora podemos crear el archivo `manifest.json` (puede tener un nombre diferente si así lo quisieramos) en la raíz de nuestro proyecto, al mismo nivel de `index.html`:
+Ahora podemos crear el archivo `manifest.json` (puede tener un nombre diferente si así lo quisiéramos) en la raíz de nuestro proyecto, al mismo nivel de `index.html`:
 
 ```JSON
 {
@@ -48,7 +48,7 @@ Ahora podemos crear el archivo `manifest.json` (puede tener un nombre diferente 
 
 ```
 
-Cuándo la aplicación se ejecuta desde el escritorio de un teléfono, el usuario verá una pantalla con el valor de `background_color` definido como color de fondo, un nombre para la apliación definido en `name` y un icono del array `icons`.
+Cuándo la aplicación se ejecuta desde el escritorio de un teléfono, el usuario verá una pantalla con el valor de `background_color` definido como color de fondo, un nombre para la aplicación definido en `name` y un icono del array `icons`.
 
 
 ### "name"
@@ -65,9 +65,9 @@ Un array de objetos que describen iconos para nuestra aplicación, en donde `src
 
 ### "start_url"
 
-En esta propiedad especificamos el documento html que queremos quese ejecute al ejecutar la aplicación desde el escritorio de un teléfono.
+En esta propiedad especificamos el documento html que queremos que se ejecute al ejecutar la aplicación desde el escritorio de un teléfono.
 
-Un truco muy últil es pasar un argumento como en este caso `?origin=installed` de esta forma podemos verificar, en Google Analytics por ejemplo, cuántos usuarios acceden a nuestra apliación desde un _shortcut_ en su teléfono. Tanto el argumento que pasamos y su valor pueden ser lo que querramos.
+Un truco muy útil es pasar un argumento como en este caso `?origin=installed` de esta forma podemos verificar, en Google Analytics por ejemplo, cuántos usuarios acceden a nuestra aplicación desde un _shortcut_ en su teléfono. Tanto el argumento que pasamos y su valor pueden ser lo que queramos.
 
 ### "background_color"
 
