@@ -3,7 +3,7 @@ layout: post
 title:  "Aprendiendo a escribir Markdown"
 date:   2016-05-26 18:04:50
 categories: general
-lvl: basic
+lvl: 1
 comments: true
 description: "¿Has visto los archivos README de hoy en día? Ya no tienen extensión txt, ahora son archivos .md, esta es la extensión de los archivos Markdown. Markdown es un 'lenguage de markup' como HTML, nos permite crear texto con algunos estilos de forma rápida y sencilla.
  

@@ -3,7 +3,7 @@ layout: post
 title:  "Web App Manifest"
 date:   2016-07-21 19:00:10
 categories: general
-lvl: intro
+lvl: 1
 comments: true
 description: "El primer paso para crear aplicaciones web progresivas es crear un archivo 'manifest'. Gracias a este archivo podemos definir iconos y configuración de colores para nuestra app, entre otros"
 ---

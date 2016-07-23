@@ -3,7 +3,7 @@ layout: post
 title:  "Haciendo un Crawler para descargar contenido"
 date:   2016-05-09 20:37:50
 categories: nodejs
-lvl: basic
+lvl: 2
 comments: true
 description: "¿Alguna vez has necesitado descargar una gran cantidad de contenido de Internet? Si es así entonces sabes que lo mejor es automatizarlo."
 emoji:  🕸
