@@ -16,7 +16,7 @@ Service worker es un proceso que corre en un thread/hilo diferente al principal,
 Es importante mencionar que únicamente se ejecutará si la aplicación es servida desde HTTPS. Podemos usar los servicios gratuitos de [GitHub Pages](https://pages.github.com/){:rel="noopener"} o [Firebase hosting](https://firebase.google.com/docs/hosting/){:rel="noopener"} que sirven archivos usando HTTPS 
 
 
-Como si eso no fuera poco, a través del service worker (**en adelante SW**) podemos recibir notificaciones push y background sync == actualizaciones en segundo plano. Estos dos últimos temas los cubriremos en el futuro, en este post vamos a ver las bases del funcionamiento del SW y algo de _offline_.
+Como si eso no fuera suficiente, a través del service worker (**en adelante SW**) podemos recibir _notificaciones push_ y _background sync_ (actualizaciones en segundo plano). Pero estos dos últimos temas los cubriremos en el futuro, en este post vamos a ver las bases del funcionamiento del SW y algo de _offline_.
 
 
 ## Registrando un SW
@@ -45,8 +45,8 @@ Tras un registro exitoso inicia el proceso de instalación
 
 // sw.js
 
-const MI_CACHE = 'cache-de-mi-app-1'; // El nombre de la cache que vamos a usar. 
-const archivos_para_cachear = [       // Array de las urls de los archivos que quiero guardar en cache
+const MI_CACHE = 'cache-de-mi-app-1'; // El nombre de la caché que vamos a usar. 
+const archivos_para_cachear = [       // Array de las urls de los archivos que quiero guardar en caché
   '/',                                
   '/css/main.css',                                        
   '/blog/post.html',                  
@@ -58,7 +58,7 @@ self.addEventListener('install', event => {         // self es lo mismo que 'thi
   event.waitUntil(                                  // Recibe una promesa y actúa dependiendo de su resolución
     caches.open(MI_CACHE)                           // ... Es claro qué hace
       .then(cache => {
-        return cache.addAll(archivos_para_cachear); // Una vez se abre la cache se agregan a ella todos los archivos especificados
+        return cache.addAll(archivos_para_cachear); // Una vez se abre la caché se agregan a ella todos los archivos especificados
       })
   ).then(() => {
     return self.skipWaiting();                      // El SW pasa de estado 'instalando' a 'activado'
@@ -105,7 +105,7 @@ Vamos a mantener una única caché, la más reciente:
 
 ```
 
-Con esto nos aseguramos de que siempre estaremos trabajando con los arhchivos más recientes.
+Con esto nos aseguramos de que siempre estaremos trabajando con los archivos más recientes.
 
 Ahora sólo nos queda interceptar peticiones y redireccionarlas de ser necesario:
 
