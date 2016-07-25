@@ -59,7 +59,7 @@ self.addEventListener('fetch', event => {
     caches.open(CACHE_ACTUAL).then(cache => {
       return fetch(event.request).then(fetchResponse => {
 
-        if(event.request.method !== 'POST'){
+        if(event.request.method === 'GET'){
           cache.put(event.request, fetchResponse.clone());
         }
         return fetchResponse;
