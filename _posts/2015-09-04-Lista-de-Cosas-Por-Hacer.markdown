@@ -2,7 +2,7 @@
 layout: post
 title:  "Ejemplo básico: Lista de Cosas Por Hacer"
 date:   2015-09-04 14:30:50
-categories: angularjs
+categories: angular1.x
 lvl: 1
 comments: true
 description: "El ejemplo básico que siempre encontrarás al iniciar un tutorial de un framework web moderno, una lista para llevar registro de tareas. Usaremos los componentes más básicos de AngularJS para comprender su funcionamiento."

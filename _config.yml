@@ -6,7 +6,7 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: UnJavaScripter's blog
+title: UnJavaScripter - blog
 email: ceo@vandelayindustries.com
 authorName: Diego Coy
 description: > # this means to ignore newlines until "baseurl:"
@@ -16,6 +16,6 @@ url: "http://http://unjavascripter.github.io/" # the base hostname & protocol fo
 twitter_username: unJavaScripter
 github_username:  unJavaScripter
 excerpt_separator: <!--more-->
-
+permalink: /:categories/:title.html
 # Build settings
 markdown: kramdown

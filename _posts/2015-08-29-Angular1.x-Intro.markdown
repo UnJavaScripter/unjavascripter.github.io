@@ -2,7 +2,7 @@
 layout: post
 title:  "Introducción express a AngularJS y a mi nuevo blog"
 date:   2015-08-27 21:00:50
-categories: angularjs
+categories: angular1.x
 lvl: 1
 comments: true
 description: "¿Qué es ese Angular del que todos hablan? ¿Qué tiene de especial? ¿Cómo empiezo a aprender?"
