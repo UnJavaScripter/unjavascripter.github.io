@@ -2,7 +2,7 @@
 published: true
 layout: post
 title:  "Service Worker"
-date:   2016-07-22 23:33:10
+date:   2016-07-25 23:33:10
 categories: general
 lvl: 2
 comments: true
@@ -13,7 +13,7 @@ Service Worker es la tecnología de moda, nos permite hacer que nuestras aplicac
 
 Service worker es un proceso que corre en un thread/hilo diferente al principal, por lo tanto no tiene acceso al DOM. Sin embarno nos podemos comunicar con él a través del envío de mensajes.
 
-Es importante mencionar que únicamente se ejecutará si la aplicación es servida desde HTTPS. Podemos usar los servicios gratuitos de [GitHub Pages](https://pages.github.com/){:rel="noopener"} o [Firebase hosting](https://firebase.google.com/docs/hosting/){:rel="noopener"} que sirven archivos usando HTTPS 
+Es importante mencionar que únicamente se ejecutará si la aplicación es servida desde HTTPS. Podemos usar [GitHub Pages](https://pages.github.com/){:rel="noopener"} o [Firebase hosting](https://firebase.google.com/docs/hosting/){:rel="noopener"} que son gratuitos y sirven archivos usando HTTPS. 
 
 ### Soporte
 
