@@ -21,7 +21,7 @@ a {
   }
 
   &.link-nostyle{
-    color: $color_text;
+    color: #f4f4f4;
     text-decoration: none;
   }
 
@@ -41,6 +41,9 @@ a {
   }
 }
 
+.text-center {
+  text-align: center;
+}
 
 
 /**

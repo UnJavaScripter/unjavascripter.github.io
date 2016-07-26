@@ -6,6 +6,7 @@ let archivos_para_cachear = [
   '/stylesheets/main.css',
 
   '/assets/img/me.jpg',
+  '/assets/img/ball-bkg.png',
 
   '/about/index.html',
   '/angular1.x/Angular1.x-Intro.html',

@@ -4,17 +4,24 @@ nav {
   background: rgba(0,0,0,0.1);
 }
 section.bam {
-  height: 10em;
-  background-color: rgba(0,0,0,0.2);
+  height: 20em;
+  background-color: #000;
+  background-image: url('../assets/img/ball-bkg.png');
   background-size: cover;
-  background-position: -56px, 128px, -72px;
-
+  background-position: -56px -72px;
+  background-repeat: no-repeat;
   justify-content: center;
 
-  >div>a>img {
+  &>.blog-title {
+    text-align: center;
+    padding-top: 8em;
+  }
+
+  &>div>a>img {
     border-radius: 50%;
     height: 7em;
     max-width: 7em;
+    margin-right: 0.7em;
   }
 
 }
