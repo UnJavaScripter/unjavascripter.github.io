@@ -11,7 +11,7 @@ description: "Aplicaciones offline con JavaScript"
 
 Service Worker es la tecnología de moda, nos permite hacer que nuestras aplicaciones puedan funcionar _offline_ === sin estar conectadas a Intenet.
 
-Service worker es un proceso que corre en un thread/hilo diferente al principal, por lo tanto no tiene acceso al DOM. Sin embarno nos podemos comunicar con él a través del envío de mensajes.
+Service worker es un proceso que corre en un thread/hilo diferente al principal, por lo tanto no tiene acceso al DOM. Sin embargo nos podemos comunicar con él a través del envío de mensajes.
 
 Es importante mencionar que únicamente se ejecutará si la aplicación es servida desde HTTPS. Podemos usar [GitHub Pages](https://pages.github.com/){:rel="noopener"} o [Firebase hosting](https://firebase.google.com/docs/hosting/){:rel="noopener"} que son gratuitos y sirven archivos usando HTTPS. 
 
