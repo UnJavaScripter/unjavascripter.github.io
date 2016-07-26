@@ -6,6 +6,10 @@ permalink: /about/
 
 Soy desarrollador "front end", o de cliente web. Me gusta experimentar con las últimas API disponibles y compartir mi conocimiento.
 
-Soy organizador de [AngularJS Colombia](http://www.meetup.com/AngularJS-Colombia){:rel="noopener"} y coorganizador del [GDG Bogotá](http://www.meetup.com/gdgbogota/){:rel="noopener"}.
+Organizo [AngularJS Colombia](http://www.meetup.com/AngularJS-Colombia){:rel="noopener"} y coorganizo el [GDG Bogotá](http://www.meetup.com/gdgbogota/){:rel="noopener"}.
 
-Soy speaker desde hace algún tiempo y me dedico a difundir mi conocimiento en AngularJS y desarrollo web moderno en diferentes comunidades como grupos particulares o universidades.
+Soy speaker desde hace algún tiempo y me dedico a difundir mi conocimiento en AngularJS y desarrollo web moderno en diferentes comunidades como grupos independientes o universidades.
+
+Aparte de las comunidades, me dedico a prestar servicios de entrenamiento a equipos de desarrollo en empresas interesadas en actualizar su _stack_ de tecnologías web.
+
+Estoy en twitter en [@unJavaScripter](https://twitter.com/@UnJavaScripter){:rel="noopener"}.
