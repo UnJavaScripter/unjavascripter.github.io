@@ -8,9 +8,16 @@ section.bam {
   background-color: #000;
   background-image: url('../assets/img/ball-bkg.png');
   background-size: cover;
-  background-position: -56px -72px;
   background-repeat: no-repeat;
   justify-content: center;
+  background-position: -156px 0px;
+
+  @media screen and (max-width: 599px) {
+    background-position: -100px 150px;
+  }
+  @media (min-width: 600px) and (max-width: 959px) {
+    background-position: -100px 100px;
+  }
 
   &>.blog-title {
     text-align: center;
