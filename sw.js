@@ -8,7 +8,8 @@ let archivos_para_cachear = [
   '/assets/img/me.jpg',
   '/assets/img/ball-bkg.png',
 
-  '/about/index.html',
+  '/about',
+  
   '/angular1.x/Angular1.x-Intro.html',
   '/angular1.x/Lista-de-Cosas-Por-Hacer.html',
   
