@@ -27,9 +27,9 @@ A la fecha los navegadores que soportan service worker son:
 
 Esto con base en lo que dice [caniuse](http://caniuse.com/#search=service%20worker){:rel="noopener"}. Para más información en el estado de los avances de cada navegador visita [isserviceworkerready](https://jakearchibald.github.io/isserviceworkerready/){:rel="noopener"}
 
+Para permitir el funcionamiento _offline_, service worker nos permite almacenar archivos en una memoria permanente que podemos usar a nuestro gusto. Entonces un beneficio adicional será el tiempo de carga posterior a la primera visita ya que muchos de nuestros archivos estarán disponibles en caché y no será necesario descargarlos de Internet (_#perfMatters_).
 
-
-Como si eso no fuera suficiente, a través del service worker (**en adelante SW**) podemos recibir _notificaciones push_ y _background sync_ (actualizaciones en segundo plano). Pero estos dos últimos temas los cubriremos en el futuro, en este post vamos a ver las bases del funcionamiento del SW y algo de _offline_.
+Como si eso no fuera suficiente, a través del service worker (**en adelante SW**) podemos recibir _notificaciones push_ y _background sync_ (actualizaciones en segundo plano). Pero estos dos últimos temas los cubriremos en el futuro, en este post vamos a ver las bases del funcionamiento del SW y _offline_.
 
 
 ## Registrando un SW
@@ -106,7 +106,7 @@ Vamos a mantener una única caché, la más reciente:
 
       return Promise.all(
         cacheNames.map(cacheName => {           // Recorremos las caches exitentes
-          if (CACHE_ACTUAL !== cacheName) {     // Si la caché del recorrido no es la caché actual...  
+          if (MI_CACHE !== cacheName) {     // Si la caché del recorrido no es la caché actual...  
             return caches.delete(cacheName);    // La borramos, así conservamos únicamente la más reciente
           }
         })
@@ -141,11 +141,11 @@ Con service worker podemos utilizar diferentes tipos de estrategia para 'cachear
 self.addEventListener('fetch', event => {                   // Escuchamos al evento 'fetch',
                                                             //  este se ejecuta siempre que se hace una solicitud HTTP (se pide o envía algo por Internet)
   event.respondWith(
-    caches.open(CACHE_ACTUAL).then(cache => {               // Abrimos la caché (en este momento ya contiene los archivos que decidimos cachear)
+    caches.open(MI_CACHE).then(cache => {               // Abrimos la caché (en este momento ya contiene los archivos que decidimos cachear)
       return fetch(event.request).then(fetchResponse => {   // event.request es la solicitud al recurso. Contiene la URL y el método utilizado
 
         if(event.request.method === 'GET'){                 // Si el método es GET, quiere decir que estamos intentando traer datos,   
-          cache.put(event.request, fetchResponse.clone());  //entonces interceptamos la respuesta y la agregamos a CACHE_ACTUAL
+          cache.put(event.request, fetchResponse.clone());  //entonces interceptamos la respuesta y la agregamos a MI_CACHE
         }
 
         return fetchResponse;                     // Después dejamos que la solicitud siga su curso
