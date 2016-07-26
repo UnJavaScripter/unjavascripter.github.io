@@ -98,7 +98,7 @@ article.post-showcase {
 
 .post {
   margin-left: 3em;
-  @media (max-width: 599px) {
+  @media screen and (max-width: 599px) {
     margin-left: 0.5em;
   }
   @media (min-width: 600px) and (max-width: 959px) {
@@ -118,6 +118,14 @@ article.post-showcase {
   &>.post-header {
     &>.post-title {
       color: $color_accent_lighter;
+    }
+  }
+
+  &>article>p {
+    margin-right: 4em;
+    @media screen and (max-width: 599px) {
+      margin-right: 1em;
+      text-align: justify;
     }
   }
 }
