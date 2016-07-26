@@ -12,7 +12,7 @@ authorName: Diego Coy
 description: > # this means to ignore newlines until "baseurl:"
   JavaScript, AngularJS y desarrollo web moderno en español. Diego Coy / UnJavaScripter
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://http://unjavascripter.github.io/" # the base hostname & protocol for your site
+url: "https://unjavascripter.github.io/" # the base hostname & protocol for your site
 twitter_username: unJavaScripter
 github_username:  unJavaScripter
 excerpt_separator: <!--more-->
