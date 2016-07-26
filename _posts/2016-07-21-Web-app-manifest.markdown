@@ -89,3 +89,8 @@ Especifica al navegador cómo queremos que se vea nuestra aplicación al ejecuta
 ### "orientation"
 
 La orientación de la aplicación, `portrait` es vertical y `landscape` horizontal
+
+## PWA
+
+> Este es mi primer artículo de la serie de publicaciones relacionadas con PWA o Progressive Web Apps (Aplicaciones Web Progresivas).
+Aquí puedes leer el siguiente: ["Service Worker"](/general/Service-worker.html)

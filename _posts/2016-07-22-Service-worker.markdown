@@ -9,11 +9,24 @@ comments: true
 description: "Aplicaciones offline con JavaScript"
 ---
 
-Service Worker es la tecnología de moda, nos permite hacer que nuestras aplicaciones puedan funcionar _offline_ === sin Intenet.
+Service Worker es la tecnología de moda, nos permite hacer que nuestras aplicaciones puedan funcionar _offline_ === sin estar conectadas a Intenet.
 
 Service worker es un proceso que corre en un thread/hilo diferente al principal, por lo tanto no tiene acceso al DOM. Sin embarno nos podemos comunicar con él a través del envío de mensajes.
 
 Es importante mencionar que únicamente se ejecutará si la aplicación es servida desde HTTPS. Podemos usar los servicios gratuitos de [GitHub Pages](https://pages.github.com/){:rel="noopener"} o [Firebase hosting](https://firebase.google.com/docs/hosting/){:rel="noopener"} que sirven archivos usando HTTPS 
+
+### Soporte
+
+A la fecha los navegadores que soportan service worker son:
+
+- Chrome
+- Chrome mobile
+- Firefox
+- Opera 
+- Android browser
+
+Esto con base en lo que dice [caniuse](http://caniuse.com/#search=service%20worker){:rel="noopener"}. Para más información en el estado de los avances de cada navegador visita [isserviceworkerready](https://jakearchibald.github.io/isserviceworkerready/){:rel="noopener"}
+
 
 
 Como si eso no fuera suficiente, a través del service worker (**en adelante SW**) podemos recibir _notificaciones push_ y _background sync_ (actualizaciones en segundo plano). Pero estos dos últimos temas los cubriremos en el futuro, en este post vamos a ver las bases del funcionamiento del SW y algo de _offline_.
@@ -155,13 +168,21 @@ self.addEventListener('fetch', event => {                   // Escuchamos al eve
 
 ¡Y eso es todo!
 
-Si visitamos nuestra aplicación y ponemos nuestro navegador en modo offline, al actualizar la página la aplicación sigue funcionando.
+Si visitamos nuestra aplicación y ponemos nuestro navegador (Chrome) en modo offline:
+
+![](https://cloud.githubusercontent.com/assets/7959823/17126063/30bda3a6-52bf-11e6-881c-52964d4ab49c.png)
+
+Al actualizar la página la aplicación sigue funcionando.
+
+> Si no usas Chrome lo más probable es que debas suspender la conexión a Internet por otros medios
 
 Este blog implementa la misma configuración de cacheo de archivos en el service worker, puedes probar aquí mismo.
 
 
-### PWA
 
-Este es mi segundo artículo de la serie de articulos relacionados con PWA o Progressive Web Apps (Aplicaciones Web Progresivas). Aquí puedes leer el primero: ["Web App Manifest"](/general/Web-app-manifest.html)
+## PWA
+
+> Este es mi segundo artículo de la serie de publicaciones relacionadas con PWA o Progressive Web Apps (Aplicaciones Web Progresivas).
+Aquí puedes leer el anterior: ["Web App Manifest"](/general/Web-app-manifest.html)
 
 
