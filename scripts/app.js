@@ -1,0 +1,1 @@
+let tostada = new Tostada();

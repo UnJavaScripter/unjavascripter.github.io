@@ -5,6 +5,9 @@ let archivos_para_cachear = [
   '/manifest.json',
   '/stylesheets/main.css',
 
+  '/scripts/app.js',
+  '/scripts/tostada.js',
+
   '/assets/img/me.jpg',
   '/assets/img/ball-bkg.png',
 
@@ -30,7 +33,9 @@ self.addEventListener('install', e => {
     caches.open(CACHE_ACTUAL).then(cache => {
       
       return cache.addAll(archivos_para_cachear)
-        .then(_ => self.skipWaiting() );
+        .then(_ => {
+          self.skipWaiting();
+        });
     })
   );
 });
