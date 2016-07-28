@@ -34,7 +34,6 @@ section.bam {
 }
 
 main{
-  margin-bottom: 5em;
   min-height: calc(100% - 142px);
   &:after {
     content: "";
@@ -133,6 +132,10 @@ article.post-showcase {
 
 #disqus_thread {
   margin-top: 7em;
+  background: #646467;
+  margin-left: -3em;
+  padding-left: 4em;
+  padding-right: 4em;
 }
 
 
