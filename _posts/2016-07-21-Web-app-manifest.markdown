@@ -5,8 +5,11 @@ date:   2016-07-21 19:00:10
 categories: general
 lvl: 1
 comments: true
-description: "El primer paso para crear aplicaciones web progresivas es crear un archivo 'manifest'. Gracias a este archivo podemos definir iconos y configuración de colores para nuestra app, entre otros"
+description: "El primer paso para crear aplicaciones web progresivas es crear un archivo 'manifest'. A través de este archivo podemos definir iconos y configuración de colores para nuestra app, entre otros"
 ---
+
+El primer paso para crear aplicaciones web progresivas es crear un archivo 'manifest'. A través de este archivo podemos definir iconos, configuración de colores para nuestra app. Nos permite instalar nuestra app en el escritorio dispositivos móviles, sugerir la descarga de una aplicación de 'la tienda' e incluso es necesario para recibir notificaciones _push_. 
+
 
 ## 1. Referencia a nuestro 'manifest'
 
