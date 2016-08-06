@@ -24,11 +24,13 @@ section.bam {
     padding-top: 8em;
   }
 
-  &>div>a>img {
+  &>div.my-pic>a.me-container>img.me-picture {
     border-radius: 50%;
     height: 7em;
     max-width: 7em;
     margin-right: 0.7em;
+    overflow-x: hidden;
+    background: rgba(0,0,0,0.3);
   }
 
 }
