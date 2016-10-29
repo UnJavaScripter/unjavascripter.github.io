@@ -33,7 +33,7 @@ Ya definimos en donde va a existir nuestra aplicación dentro del HTML de nuestr
 - En el navegador verás: nada
 
 ### 4 - Probar que funciona
-AngularJS intentará interpretar cualquier cosa que encuentre envuelta en llaves dobles: {{ }}. Más adelante veremos cómo funcionan, por ahora nos bastará con ver si al poner en ellas una operación matematica obtenemos un resultado
+AngularJS intentará interpretar cualquier cosa que encuentre envuelta en llaves dobles: { {  } }. Más adelante veremos cómo funcionan, por ahora nos bastará con ver si al poner en ellas una operación matematica obtenemos un resultado
 
 <iframe style="width: 100%; min-min-height: 400px; height: auto" src="http://embed.plnkr.co/rKrLZC7yCKdXwpzBC8Fh/index.html" frameborder="0"></iframe>
 
