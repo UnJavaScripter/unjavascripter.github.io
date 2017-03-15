@@ -1,6 +1,6 @@
 {
-  "short_name": "unJS - blog", 
-  "name": "UnJavaScripter - blog",
+  "short_name": "UnJavaScripter - blog", 
+  "name": "UnJavaScripter - blog - Desarrollo web moderno",
    "icons": [
     {
       "src": "logo_48.png",
@@ -22,5 +22,5 @@
   "orientation": "portrait",
   "theme_color": "#1c1c23",
   "background_color": "#1c1c23",
-  "start_url": "./index.html?o=i"
+  "start_url": "/?o=i"
 }

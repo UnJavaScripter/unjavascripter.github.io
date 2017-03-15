@@ -4,7 +4,10 @@
 class Tostada {
   constructor(config) {
     // Exponemos config como una variable 'global' dentro de la clase
-    this.config = config;
+    this.config = config || {};
+    this.config.color = this.config.color || '#f9f9f9';
+    this.config.fondo = this.config.fondo || 'rgba(0,0,0,0.8)';
+    this.config.tiempo = this.config.tiempo || 4000;
 
     let estilos = document.createElement('style');
     estilos.innerHTML = `
@@ -13,8 +16,8 @@ class Tostada {
         padding: 12px;
         margin-bottom: 11px;
         margin-left: 5px;
-        background: ${this._estaConfiguracion("fondo") || 'rgba(0,0,0,0.8)'};
-        color: ${this._estaConfiguracion("color") || '#f9f9f9'};
+        background: ${this.config["fondo"]};
+        color: ${this.config["color"]};
         font-family: sans-serif;
         bottom: 0;
         position: fixed;
@@ -37,31 +40,23 @@ class Tostada {
     document.head.appendChild(estilos);
   }
 
-  _estaConfiguracion(configuracion) {
-    if(!this.config){
-      return false;
-    }else if(this.config[configuracion]){
-      return this.config[configuracion];
-    }
-  }
-
   mostrar(mensaje) {
 
-    // Creamos el elemento HTML desde JavaSCript
-    this.tostada_div = document.createElement("div");
-
-    // Le asignamos la clase que usaremos para encontrarlo
-    this.tostada_div.classList.add('tst--tostada');
-
-    // Le damos un contenido
-    this.tostada_div.innerHTML = mensaje;
     
     // Creamos una promesa con la API nativa Promise().
     new Promise((resolve, reject) => {
-      // Primero hacemos que se agreguen las clases que necesitamos para iniciar la transición,
-      //  dentro de un timeout de 10ms para separar este proceso del anterior
-      setTimeout(_=>{
 
+      // Creamos el elemento HTML desde JavaSCript
+      this.tostada_div = document.createElement("div");
+
+      // Le asignamos la clase que usaremos para encontrarlo
+      this.tostada_div.classList.add('tst--tostada');
+      // Le damos un contenido
+      this.tostada_div.innerHTML = mensaje;
+      resolve();
+    })
+    .then(_ => {
+      // Primero hacemos que se agreguen las clases que necesitamos para iniciar la transición,
         // Si hay algún otro 'toast' presente, lo desplazamos hacia arriba
         let todasLasTostadas = document.querySelectorAll('.tst--tostada');
         if(todasLasTostadas.length > 1) {
@@ -74,14 +69,13 @@ class Tostada {
 
         this.tostada_div.addEventListener('transitionend', this.onTransitionEnd); // Queremos que cuando termine la transición, se remueva la clase tst--animable
 
-        resolve(this.tostada_div);  // Resolvemos la promesa con la referencia al elemento de la 'tostada'
+        return this.tostada_div;  // Retornamos la referencia al elemento de la 'tostada'
                                     //  para que quede disponible para el siguiente elemento en la cadena de promesas   
-      },10);
-
-    }).then(elemento => {              // Recibimos la referencia al elemento de la tostada
+    })
+    .then(elemento => {              // Recibimos la referencia al elemento de la tostada
       setTimeout(_ => {
         this._ocultar(elemento);       // Pasamos la referencia al elemento al método 'privado' _ocultar para que este sepa qué tiene que ocultar
-      }, this._estaConfiguracion("tiempo") || 4000);
+      }, this.config["tiempo"]);
     })
 
 
