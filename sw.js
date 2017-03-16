@@ -1,4 +1,4 @@
-let CACHE_ACTUAL = 'cache0';
+let CACHE_ACTUAL = 'cache2';
 let archivos_para_cachear = [
   '/',
   '/?o=i',
