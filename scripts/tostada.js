@@ -2,22 +2,21 @@
 
 
 class Tostada {
-  constructor(config) {
+  constructor(configuracionAlInstanciar) {
     // Exponemos config como una variable 'global' dentro de la clase
-    this.config = config || {};
-    this.config.color = this.config.color || '#f9f9f9';
-    this.config.fondo = this.config.fondo || 'rgba(0,0,0,0.8)';
-    this.config.tiempo = this.config.tiempo || 4000;
-
-    let estilos = document.createElement('style');
+    this.configPorDefecto = {
+      color: '#f9f9f9',
+      fondo: 'rgba(0,0,0,0.8)',
+      tiempo: 4000
+    };
+    
+    const estilos = document.createElement('style');
     estilos.innerHTML = `
       /* Elemento (tostada) */
       .tst--tostada {
         padding: 12px;
         margin-bottom: 11px;
         margin-left: 5px;
-        background: ${this.config["fondo"]};
-        color: ${this.config["color"]};
         font-family: sans-serif;
         bottom: 0;
         position: fixed;
@@ -40,11 +39,11 @@ class Tostada {
     document.head.appendChild(estilos);
   }
 
-  mostrar(mensaje) {
+  mostrar(mensaje, configuracionPersonalizada) {
+    const _config = this.definirConfiguracion(configuracionPersonalizada);
 
-    
     // Creamos una promesa con la API nativa Promise().
-    new Promise((resolve, reject) => {
+    const promesa = new Promise((resolve, reject) => {
 
       // Creamos el elemento HTML desde JavaSCript
       this.tostada_div = document.createElement("div");
@@ -53,34 +52,38 @@ class Tostada {
       this.tostada_div.classList.add('tst--tostada');
       // Le damos un contenido
       this.tostada_div.innerHTML = mensaje;
-      resolve();
-    })
-    .then(_ => {
       // Primero hacemos que se agreguen las clases que necesitamos para iniciar la transición,
         // Si hay algún otro 'toast' presente, lo desplazamos hacia arriba
         let todasLasTostadas = document.querySelectorAll('.tst--tostada');
-        if(todasLasTostadas.length > 1) {
-          let nextPos  = (100 * (todasLasTostadas.length-1)) + (todasLasTostadas.length*10);
-          this.tostada_div.style.transform = `translateY(-${nextPos}%)`
-        }
+
+        let nextPos  = (100 * (todasLasTostadas.length-1)) + (todasLasTostadas.length*10);
+        this.tostada_div.style.transform = `translateY(-${nextPos+100}%)`
+        
+        this.tostada_div.style.background = _config["fondo"];
+        this.tostada_div.style.color = _config["color"];
 
         this.tostada_div.classList.add('tst--animable');
         this.tostada_div.classList.add('tst--visible');
 
         this.tostada_div.addEventListener('transitionend', this.onTransitionEnd); // Queremos que cuando termine la transición, se remueva la clase tst--animable
 
-        return this.tostada_div;  // Retornamos la referencia al elemento de la 'tostada'
+        // Ya le asignamos todo lo que necesitamos al elemento base, ahora lo agregamos al DOM 
+        document.body.appendChild(this.tostada_div);
+
+        resolve(this.tostada_div);  // Retornamos la referencia al elemento de la 'tostada'
                                     //  para que quede disponible para el siguiente elemento en la cadena de promesas   
     })
     .then(elemento => {              // Recibimos la referencia al elemento de la tostada
-      setTimeout(_ => {
+      new Promise((resolve, reject) => {
+        setTimeout(_ => {
+          resolve();
+        }, _config["tiempo"]);
+      }).then(_ => {
         this._ocultar(elemento);       // Pasamos la referencia al elemento al método 'privado' _ocultar para que este sepa qué tiene que ocultar
-      }, this.config["tiempo"]);
+      })
     })
 
 
-    // Ya le asignamos todo lo que necesitamos al elemento base, ahora lo agregamos al DOM 
-    document.body.appendChild(this.tostada_div);
 
   }
 
@@ -100,10 +103,19 @@ class Tostada {
       if(todasLasTostadas.length) {
         todasLasTostadas.forEach((e, i, a) => {
           let nextPos  = (100 * (a.length-1)) + (a.length*10);
-          e.style.transform = `translateY(-${(/\d+/g).exec(e.style.transform)[0] - 110}%)`;
+          if(e.style.transform) {
+            e.style.transform = `translateY(-${(/\d+/g).exec(e.style.transform)[0] - 110}%)`;
+          }
         })
       }
-
     }
   }
+
+  definirConfiguracion(configObj) {
+    let configuracion = {};
+    Object.assign(configuracion, this.configPorDefecto);
+    Object.assign(configuracion, configObj);
+    return configuracion;
+  }
+
 }
