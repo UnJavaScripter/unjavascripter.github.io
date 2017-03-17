@@ -77,8 +77,25 @@ blockquote {
  * Meeeee
  */
 
-
 .image-center {
   display: block;
   margin: 0 auto;
+}
+
+.btn-sesion {
+  display: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn-sesion.displayed {
+  display: block;
+}
+
+.barra-auth {
+  position: absolute;
+  width: 100%;
+  padding-right: 2em;
+  padding-top: 1.2em;
 }
