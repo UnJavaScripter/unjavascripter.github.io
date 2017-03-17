@@ -82,18 +82,18 @@ blockquote {
   margin: 0 auto;
 }
 
-.btn-sesion {
+.btn-session {
   display: none;
   &:hover {
     cursor: pointer;
   }
 }
 
-.btn-sesion.displayed {
+.btn-session.displayed {
   display: block;
 }
 
-.barra-auth {
+.auth-bar {
   position: absolute;
   width: 100%;
   padding-right: 2em;
