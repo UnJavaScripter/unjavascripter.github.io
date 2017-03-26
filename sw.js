@@ -1,4 +1,5 @@
-let CACHE_ACTUAL = 'cache2';
+let notificationRedirectUrl = '';
+let CACHE_ACTUAL = 'cache1';
 let archivos_para_cachear = [
   '/',
   '/?o=i',
@@ -53,6 +54,7 @@ self.addEventListener('activate', (event) => {
           if (unaCache !== CACHE_ACTUAL) {
             return caches.delete(unaCache).then(() => {
               console.log('Cachés previas eliminadas');
+              self.skipWaiting();
             });
           }
         })
@@ -99,17 +101,32 @@ self.addEventListener('fetch', (event) => {
 });
 
 // Notificaciones Push
-self.addEventListener('push', function(event) {  
-  var title = 'Jojojo';  
-  var body = '¡Un mensaje Push ha llegado!';  
-  var icon = '/apple-touch-icon.png';  
-  var tag = 'jojojojojo-push-tag';
-
-  event.waitUntil(  
-    self.registration.showNotification(title, {  
-      body: body,  
-      icon: icon,  
-      tag: tag  
-    })  
-  );  
+self.addEventListener('push', event =>  {  
+  event.waitUntil(
+    // Traemos de un API remota la información que vamos a asigar a esta notificación
+    fetch('https://blog-diegocoy.firebaseio.com/push_data.json').then(response => {
+      return response.json()
+        .then(pushData => {
+          return self.registration.showNotification(pushData.title, {  
+            body: pushData.body || '¡Un mensaje Push ha llegado!',
+            icon: pushData.icon || '/logo_192.png',
+            tag: pushData.tag || 'push-tag',
+            actions: [
+              {action: pushData.action, title: 'Leer 🕮'}
+            ],
+            data: pushData.action_data
+          });
+        })
+      })
+  )
 });
+
+// Lo que pasará al hacer clic sobre la notificación
+self.addEventListener('notificationclick', event => {
+  event.notification.close();
+
+  if (event.action === 'href') {  
+    clients.openWindow(event.notification.data);  
+  }
+
+})
