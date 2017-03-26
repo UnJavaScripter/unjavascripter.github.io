@@ -15,7 +15,10 @@
           </h1>
         </a>
       </div>
-      
+      <div class="push-subscription-container" flex layout="column" layout-align="center center">
+        <img src="../assets/img/push-notifications.png" class="push-button-enable" alt="Recibe notificaciones de nuevos posts" onclick="window.subscribeToPushes();" hidden>
+        <img src="../assets/img/push-notifications-nope.png" class="push-button-disable" alt="Dejar de recibir notificaciones" onclick="window.unsubscribeFromPushes();" hidden>
+      </div>
       <div class="my-pic" flex layout="column" layout-align="end end">
         <a href="/about/" class="me-container">
           <img src="../assets/img/me.jpg"  class="me-picture" alt="Diego Coy/UnJavaScripter" title="Yo ~ Diego Coy">
