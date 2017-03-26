@@ -29,21 +29,22 @@
     });
 
     navigator.serviceWorker.ready.then(serviceWorkerRegistration => {
-      if(firebaseAuth) {
-        updateSubscriptionUI(serviceWorkerRegistration);
+      if(firebaseAuth.currentUser) {
+        window.updateSubscriptionUI();
       }
     })
 
-    function updateSubscriptionUI(registration) {
-      registration.pushManager.getSubscription().then(pushSubscription => {
-        console.log(pushSubscription);
-        if(pushSubscription) {
-          disablePushes_btn.hidden = false;
-          enablePushes_btn.hidden = true;
-          return;
-        }
-        enablePushes_btn.hidden = false;
-        disablePushes_btn.hidden = true;
+    window.updateSubscriptionUI = function() {
+      navigator.serviceWorker.ready.then(registration => {
+        registration.pushManager.getSubscription().then(pushSubscription => {
+          if(pushSubscription) {
+            disablePushes_btn.hidden = false;
+            enablePushes_btn.hidden = true;
+            return;
+          }
+          enablePushes_btn.hidden = false;
+          disablePushes_btn.hidden = true;
+        })
       })
     }
 
@@ -63,14 +64,13 @@
           });
         }
       }
-      updateSubscriptionUI(registration);
+      window.updateSubscriptionUI();
     }
 
     window.subscribeToPushes = function () {
       navigator.serviceWorker.ready.then(serviceWorkerRegistration => {
         serviceWorkerRegistration.pushManager.getSubscription()
           .then(function(subscription) {
-            console.log(subscription);
             if(!subscription) {
               serviceWorkerRegistration.pushManager.subscribe({userVisibleOnly: true}).then(subscription => {
                 sendSubscriptionToServer(true, subscription, serviceWorkerRegistration);

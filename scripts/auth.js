@@ -2,6 +2,9 @@ const provider = new firebase.auth.GoogleAuthProvider();
 const iniciarSesion_btn = document.querySelector('.session-in');
 const cerrarSesion_btn = document.querySelector('.session-out');
 
+const enablePushes_btn = document.querySelector('.push-button-enable');
+const disablePushes_btn = document.querySelector('.push-button-disable');
+
 function auth_login() {
   provider.addScope('profile');
   provider.addScope('email');
@@ -19,22 +22,17 @@ firebase.auth().getRedirectResult().then(function(result) {
     if (user) {
       hideElem(iniciarSesion_btn);
       showElem(cerrarSesion_btn);
-      tostada.mostrar(`¡Hola ${user.displayName}!`)
+      tostada.mostrar(`¡Hola ${user.displayName}!`);
+      window.updateSubscriptionUI();
     } else {
       showElem(iniciarSesion_btn);
       hideElem(cerrarSesion_btn);
+      enablePushes_btn.hidden = true;
+      disablePushes_btn.hidden = true;
       // tostada.mostrar(`¿Sabías que puedes registrarte?`, {tiempo: 6000})
     }
   });
 }).catch(function(error) {
-  // Handle Errors here.
-  let errorCode = error.code;
-  let errorMessage = error.message;
-  // The email of the user's account used.
-  let email = error.email;
-  // The firebase.auth.AuthCredential type that was used.
-  let credential = error.credential;
-  // ...
   console.log(error);
 });
 
